@@ -1,0 +1,300 @@
+/**********************************************************************
+
+   ultra64 BGCheck funlikefile ( sand )
+
+**********************************************************************/
+
+/*
+#define	BGCHECKCODE_0	0
+#define	BGCHECKCODE_3	5
+#define	BGCHECKCODE_5	0
+#define	BGCHECKCODE_6	0
+
+#define	BGCHECKCODE_33	33
+#define	BGCHECKCODE_34	34
+#define	BGCHECKCODE_35	35
+#define	BGCHECKCODE_38	38
+
+#define	BGCHECKCODE_40	36
+#define	BGCHECKCODE_41	36
+#define	BGCHECKCODE_42	36
+#define	BGCHECKCODE_43	36
+#define	BGCHECKCODE_44	36
+#define	BGCHECKCODE_45	36
+#define	BGCHECKCODE_46	36
+#define	BGCHECKCODE_47	36
+
+#define	BGCHECKCODE_50	37
+#define	BGCHECKCODE_51	37
+#define	BGCHECKCODE_52	37
+#define	BGCHECKCODE_53	37
+#define	BGCHECKCODE_54	37
+#define	BGCHECKCODE_55	37
+#define	BGCHECKCODE_56	37
+#define	BGCHECKCODE_57	37
+*/
+
+#define	BGCHECKCODE_0	SURFACE_DEFAULT
+#define	BGCHECKCODE_3	SURFACE_HANGABLE
+#define	BGCHECKCODE_5	SURFACE_DEFAULT
+#define	BGCHECKCODE_6	SURFACE_DEFAULT
+
+#define	BGCHECKCODE_33	SURFACE_SHALLOW_QUICKSAND
+#define	BGCHECKCODE_34	SURFACE_DEEP_QUICKSAND
+#define	BGCHECKCODE_35	SURFACE_INSTANT_QUICKSAND
+#define	BGCHECKCODE_38	SURFACE_QUICKSAND
+
+#define	BGCHECKCODE_40	SURFACE_DEEP_MOVING_QUICKSAND
+#define	BGCHECKCODE_41	SURFACE_DEEP_MOVING_QUICKSAND
+#define	BGCHECKCODE_42	SURFACE_DEEP_MOVING_QUICKSAND
+#define	BGCHECKCODE_43	SURFACE_DEEP_MOVING_QUICKSAND
+#define	BGCHECKCODE_44	SURFACE_DEEP_MOVING_QUICKSAND
+#define	BGCHECKCODE_45	SURFACE_DEEP_MOVING_QUICKSAND
+#define	BGCHECKCODE_46	SURFACE_DEEP_MOVING_QUICKSAND
+#define	BGCHECKCODE_47	SURFACE_DEEP_MOVING_QUICKSAND
+
+#define	BGCHECKCODE_50	SURFACE_SHALLOW_MOVING_QUICKSAND
+#define	BGCHECKCODE_51	SURFACE_SHALLOW_MOVING_QUICKSAND
+#define	BGCHECKCODE_52	SURFACE_SHALLOW_MOVING_QUICKSAND
+#define	BGCHECKCODE_53	SURFACE_SHALLOW_MOVING_QUICKSAND
+#define	BGCHECKCODE_54	SURFACE_SHALLOW_MOVING_QUICKSAND
+#define	BGCHECKCODE_55	SURFACE_SHALLOW_MOVING_QUICKSAND
+#define	BGCHECKCODE_56	SURFACE_SHALLOW_MOVING_QUICKSAND
+#define	BGCHECKCODE_57	SURFACE_SHALLOW_MOVING_QUICKSAND
+
+/* VERTEX  TOTAL (73) */
+/* POLYGON TOTAL (126) */
+
+const Collision sand_info[] = {
+	COL_INIT(),
+	COL_VERTEX_INIT(73),
+    COL_VERTEX(    50,      0,  -2000),
+    COL_VERTEX(  1050,      0,  -2000),
+    COL_VERTEX(   800,      0,  -1500),
+    COL_VERTEX(    50,      0,  -1500),
+    COL_VERTEX(  1550,      0,   -700),
+    COL_VERTEX(  2050,      0,  -1000),
+    COL_VERTEX(  2050,      0,      0),
+    COL_VERTEX(  1550,      0,      0),
+    COL_VERTEX(  -700,      0,  -1500),
+    COL_VERTEX(  -950,      0,  -2000),
+    COL_VERTEX( -1450,      0,   -700),
+    COL_VERTEX( -1950,      0,      0),
+    COL_VERTEX( -1950,      0,  -1000),
+    COL_VERTEX( -1450,      0,      0),
+    COL_VERTEX(    50,      0,   2000),
+    COL_VERTEX(   800,      0,   1500),
+    COL_VERTEX(  1050,      0,   2000),
+    COL_VERTEX(    50,      0,   1500),
+    COL_VERTEX(  1550,      0,    700),
+    COL_VERTEX(  2050,      0,   1000),
+    COL_VERTEX(  -950,      0,   2000),
+    COL_VERTEX(  -700,      0,   1500),
+    COL_VERTEX( -1450,      0,    700),
+    COL_VERTEX( -1950,      0,   1000),
+    COL_VERTEX(     0,      0,  -4700),
+    COL_VERTEX(  2350,      0,  -4700),
+    COL_VERTEX(  1650,   -100,  -3350),
+    COL_VERTEX(     0,   -100,  -3350),
+    COL_VERTEX(  3350,   -100,  -1650),
+    COL_VERTEX(  4750,      0,  -2300),
+    COL_VERTEX(  4750,      0,      0),
+    COL_VERTEX(  3350,   -100,      0),
+    COL_VERTEX( -1650,   -100,  -3350),
+    COL_VERTEX( -2300,      0,  -4700),
+    COL_VERTEX( -3350,   -100,  -1650),
+    COL_VERTEX( -4700,      0,      0),
+    COL_VERTEX( -4700,      0,  -2300),
+    COL_VERTEX( -3350,   -100,      0),
+    COL_VERTEX(     0,      0,   4700),
+    COL_VERTEX(  1650,   -100,   3350),
+    COL_VERTEX(  2350,      0,   4700),
+    COL_VERTEX(     0,   -100,   3350),
+    COL_VERTEX(  3350,   -100,   1650),
+    COL_VERTEX(  4750,      0,   2300),
+    COL_VERTEX( -2300,      0,   4700),
+    COL_VERTEX( -1650,   -100,   3350),
+    COL_VERTEX( -3350,   -100,   1650),
+    COL_VERTEX( -4700,      0,   2300),
+    COL_VERTEX(  -250,      0,   -500),
+    COL_VERTEX(   250,      0,   -500),
+    COL_VERTEX(     0,   -500,      0),
+    COL_VERTEX(   500,      0,   -250),
+    COL_VERTEX(   500,      0,    250),
+    COL_VERTEX(  -500,      0,   -250),
+    COL_VERTEX(  -500,      0,    250),
+    COL_VERTEX(   250,      0,    500),
+    COL_VERTEX(  -250,      0,    500),
+    COL_VERTEX( -1250,   -100,  -2500),
+    COL_VERTEX( -2500,   -100,  -1150),
+    COL_VERTEX( -2500,   -100,      0),
+    COL_VERTEX( -2500,   -100,   1150),
+    COL_VERTEX( -1250,   -100,   2500),
+    COL_VERTEX(     0,   -100,   2500),
+    COL_VERTEX(  1250,   -100,   2500),
+    COL_VERTEX(  2500,   -100,   1150),
+    COL_VERTEX(  2500,   -100,      0),
+    COL_VERTEX(  2500,   -100,  -1150),
+    COL_VERTEX(  1250,   -100,  -2500),
+    COL_VERTEX(     0,   -100,  -2500),
+    COL_VERTEX(   600,    400,  -1450),
+    COL_VERTEX(  5000,    400,   2300),
+    COL_VERTEX(  5000,    400,  -1450),
+    COL_VERTEX(   600,    400,   2300),
+	COL_TRI_INIT(BGCHECKCODE_50, 4),
+    COL_TRI_SPECIAL(  2,   1,  0, 64),
+    COL_TRI_SPECIAL(  3,   2,  0, 64),
+    COL_TRI_SPECIAL(  9,   8,  0, 64),
+    COL_TRI_SPECIAL(  8,   3,  0, 64),
+	COL_TRI_INIT(BGCHECKCODE_52, 4),
+    COL_TRI_SPECIAL(  6,   5,  4,256),
+    COL_TRI_SPECIAL(  7,   6,  4,256),
+    COL_TRI_SPECIAL( 19,   6, 18,256),
+    COL_TRI_SPECIAL(  6,   7, 18,256),
+	COL_TRI_INIT(BGCHECKCODE_51, 2),
+    COL_TRI_SPECIAL(  4,   1,  2, 32),
+    COL_TRI_SPECIAL(  4,   5,  1, 32),
+	COL_TRI_INIT(BGCHECKCODE_56, 4),
+    COL_TRI_SPECIAL( 12,  11, 10,384),
+    COL_TRI_SPECIAL( 11,  13, 10,384),
+    COL_TRI_SPECIAL( 11,  23, 22,384),
+    COL_TRI_SPECIAL( 13,  11, 22,384),
+	COL_TRI_INIT(BGCHECKCODE_57, 2),
+    COL_TRI_SPECIAL(  9,  10,  8,352),
+    COL_TRI_SPECIAL( 12,  10,  9,352),
+	COL_TRI_INIT(BGCHECKCODE_54, 4),
+    COL_TRI_SPECIAL( 16,  15, 14,704),
+    COL_TRI_SPECIAL( 15,  17, 14,704),
+    COL_TRI_SPECIAL( 21,  20, 14,704),
+    COL_TRI_SPECIAL( 17,  21, 14,704),
+	COL_TRI_INIT(BGCHECKCODE_53, 2),
+    COL_TRI_SPECIAL( 16,  18, 15,480),
+    COL_TRI_SPECIAL( 19,  18, 16,480),
+	COL_TRI_INIT(BGCHECKCODE_55, 2),
+    COL_TRI_SPECIAL( 22,  20, 21,672),
+    COL_TRI_SPECIAL( 22,  23, 20,672),
+	COL_TRI_INIT(BGCHECKCODE_5, 48),
+    COL_TRI( 26,  25, 24),
+    COL_TRI( 27,  26, 24),
+    COL_TRI( 30,  29, 28),
+    COL_TRI( 31,  30, 28),
+    COL_TRI( 28,  25, 26),
+    COL_TRI( 28,  29, 25),
+    COL_TRI( 33,  32, 24),
+    COL_TRI( 32,  27, 24),
+    COL_TRI( 36,  35, 34),
+    COL_TRI( 35,  37, 34),
+    COL_TRI( 33,  34, 32),
+    COL_TRI( 36,  34, 33),
+    COL_TRI( 40,  39, 38),
+    COL_TRI( 39,  41, 38),
+    COL_TRI( 43,  30, 42),
+    COL_TRI( 30,  31, 42),
+    COL_TRI( 40,  42, 39),
+    COL_TRI( 43,  42, 40),
+    COL_TRI( 45,  44, 38),
+    COL_TRI( 41,  45, 38),
+    COL_TRI( 35,  47, 46),
+    COL_TRI( 37,  35, 46),
+    COL_TRI( 46,  44, 45),
+    COL_TRI( 46,  47, 44),
+    COL_TRI( 57,  12,  9),
+    COL_TRI( 57,  58, 12),
+    COL_TRI( 58,  59, 12),
+    COL_TRI( 12,  59, 11),
+    COL_TRI( 59,  23, 11),
+    COL_TRI( 59,  60, 23),
+    COL_TRI( 60,  61, 23),
+    COL_TRI( 23,  61, 20),
+    COL_TRI( 61,  62, 20),
+    COL_TRI( 20,  62, 14),
+    COL_TRI( 62,  16, 14),
+    COL_TRI( 62,  63, 16),
+    COL_TRI( 63,  64, 19),
+    COL_TRI( 63,  19, 16),
+    COL_TRI( 19,  65,  6),
+    COL_TRI( 64,  65, 19),
+    COL_TRI(  6,  66,  5),
+    COL_TRI( 65,  66,  6),
+    COL_TRI(  5,  67,  1),
+    COL_TRI( 66,  67,  5),
+    COL_TRI( 67,  68,  1),
+    COL_TRI(  1,  68,  0),
+    COL_TRI( 68,  57,  0),
+    COL_TRI( 57,   9,  0),
+	COL_TRI_INIT(BGCHECKCODE_6, 14),
+    COL_TRI( 50,  49, 48),
+    COL_TRI( 50,  52, 51),
+    COL_TRI( 54,  50, 53),
+    COL_TRI( 56,  55, 50),
+    COL_TRI( 53,  50, 48),
+    COL_TRI( 50,  51, 49),
+    COL_TRI( 54,  56, 50),
+    COL_TRI( 55,  52, 50),
+    COL_TRI( 51,   4,  2),
+    COL_TRI( 51,   7,  4),
+    COL_TRI( 51,  52,  7),
+    COL_TRI( 52,  18,  7),
+    COL_TRI( 18,  52, 15),
+    COL_TRI( 52,  55, 15),
+	COL_TRI_INIT(BGCHECKCODE_34, 4),
+    COL_TRI( 10,  53,  8),
+    COL_TRI(  8,  48,  3),
+    COL_TRI( 53,  48,  8),
+    COL_TRI( 13,  53, 10),
+	COL_TRI_INIT(BGCHECKCODE_35, 3),
+    COL_TRI(  3,  49,  2),
+    COL_TRI( 48,  49,  3),
+    COL_TRI( 49,  51,  2),
+	COL_TRI_INIT(BGCHECKCODE_33, 3),
+    COL_TRI( 55,  17, 15),
+    COL_TRI( 55,  56, 17),
+    COL_TRI( 56,  21, 17),
+	COL_TRI_INIT(BGCHECKCODE_38, 4),
+    COL_TRI( 56,  54, 21),
+    COL_TRI( 54,  22, 21),
+    COL_TRI( 54,  53, 13),
+    COL_TRI( 22,  54, 13),
+	COL_TRI_INIT(BGCHECKCODE_40, 4),
+    COL_TRI_SPECIAL( 67,  26, 27, 64),
+    COL_TRI_SPECIAL( 68,  67, 27, 64),
+    COL_TRI_SPECIAL( 32,  57, 27, 64),
+    COL_TRI_SPECIAL( 57,  68, 27, 64),
+	COL_TRI_INIT(BGCHECKCODE_42, 4),
+    COL_TRI_SPECIAL( 31,  28, 66,256),
+    COL_TRI_SPECIAL( 65,  31, 66,256),
+    COL_TRI_SPECIAL( 42,  31, 64,256),
+    COL_TRI_SPECIAL( 31,  65, 64,256),
+	COL_TRI_INIT(BGCHECKCODE_41, 2),
+    COL_TRI_SPECIAL( 66,  26, 67, 32),
+    COL_TRI_SPECIAL( 66,  28, 26, 32),
+	COL_TRI_INIT(BGCHECKCODE_46, 4),
+    COL_TRI_SPECIAL( 34,  37, 58,384),
+    COL_TRI_SPECIAL( 37,  59, 58,384),
+    COL_TRI_SPECIAL( 37,  46, 60,384),
+    COL_TRI_SPECIAL( 59,  37, 60,384),
+	COL_TRI_INIT(BGCHECKCODE_47, 2),
+    COL_TRI_SPECIAL( 32,  58, 57,352),
+    COL_TRI_SPECIAL( 34,  58, 32,352),
+	COL_TRI_INIT(BGCHECKCODE_44, 4),
+    COL_TRI_SPECIAL( 39,  63, 41,704),
+    COL_TRI_SPECIAL( 63,  62, 41,704),
+    COL_TRI_SPECIAL( 61,  45, 41,704),
+    COL_TRI_SPECIAL( 62,  61, 41,704),
+	COL_TRI_INIT(BGCHECKCODE_43, 2),
+    COL_TRI_SPECIAL( 39,  64, 63,480),
+    COL_TRI_SPECIAL( 42,  64, 39,480),
+	COL_TRI_INIT(BGCHECKCODE_45, 2),
+    COL_TRI_SPECIAL( 60,  45, 61,672),
+    COL_TRI_SPECIAL( 60,  46, 45,672),
+	COL_TRI_INIT(BGCHECKCODE_3, 2),
+    COL_TRI( 71,  70, 69),
+    COL_TRI( 70,  72, 69),
+	COL_TRI_STOP(),
+	COL_END(),
+
+};
+/*=====================================================================
+   end of BGcheck
+=====================================================================*/
+
