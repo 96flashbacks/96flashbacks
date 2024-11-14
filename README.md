@@ -2,6 +2,8 @@
 
 This repo contains a modified decompilation of Super Mario 64 which aims to interpret a late development build of the game.
 
+Please contribute first to the [development branch](https://github.com/stalechilibeans/96flashbacks/tree/development/). Things will be merged to the main branch once enough changes have been added for a new release.
+
 ## Credits
 
 #### 96flashbacks Developer Team
