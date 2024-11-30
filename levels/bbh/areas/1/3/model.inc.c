@@ -50,7 +50,7 @@ static const Gfx bbh_seg7_dl_07007AE0[] = {
 
 // 0x07007B48 - 0x07007B90
 static const Gfx bbh_seg7_dl_07007B48[] = {
-    gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, bbh_seg7_texture_07001000), //use a different texture for this
+    gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, bbh_seg7_texture_07005800),
     gsDPLoadSync(),
     gsDPLoadBlock(G_TX_LOADTILE, 0, 0, 32 * 32 - 1, CALC_DXT(32, G_IM_SIZ_16b_BYTES)),
     gsSPLight(&bbh_seg7_lights_070079C8.l, 1),

@@ -28,6 +28,8 @@ Please contribute first to the [development branch](https://github.com/stalechil
 
 *xerox* - programming assistance, music
 
-*kl1z* - modelling assistance
+*kl1z* - modelling contributions
+
+*SuperGarlic64* - texture contributions
 
 #### Original Super Mario 64 Decompilation Team
