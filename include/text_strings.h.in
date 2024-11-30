@@ -93,9 +93,9 @@
 #define TEXT_EXIT_COURSE _("コースからでる？")
 #define TEXT_CAMERA_ANGLE_R _("Ｒボタンのカメラきりかえ")
 
-// Camera Options
-#define TEXT_LAKITU_MARIO _("ジュゲム↔マリオ")
-#define TEXT_LAKITU_STOP _("ジュゲム↔ストップ")
+// Camera Options -- removed mentions of Jugemu/Lakitu in here
+#define TEXT_LAKITU_MARIO _("カメラ↔マリオ")
+#define TEXT_LAKITU_STOP _("カメラ↔ストップ")
 #define TEXT_NORMAL_UPCLOSE _("（おすすめ）（リアル）")
 #define TEXT_NORMAL_FIXED _("（おすすめ）（とまる）")
 
