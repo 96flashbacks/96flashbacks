@@ -39,19 +39,6 @@ Gfx mat_wooden_front[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx wooden_signpost_mesh[] = {
-	gsSPDisplayList(mat_wooden_back),
-	gsSPDisplayList(wooden_signpost_mesh_tri_0),
-	gsSPDisplayList(mat_wooden_front),
-	gsSPDisplayList(wooden_signpost_mesh_tri_1),
-	gsDPPipeSync(),
-	gsSPSetGeometryMode(G_LIGHTING),
-	gsSPClearGeometryMode(G_TEXTURE_GEN),
-	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsSPTexture(65535, 65535, 0, 0, 0),
-	gsSPEndDisplayList(),
-};
-
 // Vtx Data
 Vtx wooden_signpost_mesh_vtx_0[15] = {
 	{{ {-23, 490, 34}, 0, {922, 162}, {158, 56, 58, 255} }},
@@ -106,5 +93,18 @@ Gfx wooden_signpost_mesh_tri_1[] = {
 	gsSPVertex(wooden_signpost_mesh_vtx_1 + 0, 4, 0),
 	gsSP1Triangle(0, 1, 2, 0),
 	gsSP1Triangle(0, 3, 1, 0),
+	gsSPEndDisplayList(),
+};
+
+Gfx wooden_signpost_mesh[] = {
+	gsSPDisplayList(mat_wooden_back),
+	gsSPDisplayList(wooden_signpost_mesh_tri_0),
+	gsSPDisplayList(mat_wooden_front),
+	gsSPDisplayList(wooden_signpost_mesh_tri_1),
+	gsDPPipeSync(),
+	gsSPSetGeometryMode(G_LIGHTING),
+	gsSPClearGeometryMode(G_TEXTURE_GEN),
+	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
+	gsSPTexture(65535, 65535, 0, 0, 0),
 	gsSPEndDisplayList(),
 };
