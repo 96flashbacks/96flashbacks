@@ -2157,7 +2157,7 @@ chan_end
 
 .layer_CB2:
 layer_transpose 253
-layer_note1 39, 0x1c, 127
+layer_note1 40, 0x1c, 127
 layer_end
 
 .sound_mario_whoa:
@@ -2231,8 +2231,7 @@ chan_setlayer 0, .layer_D17
 chan_end
 
 .layer_D17:
-layer_transpose 254
-layer_note1 40, 0x60, 145
+layer_note1 39, 0x60, 127
 layer_end
 
 .sound_mario_snoring2:
