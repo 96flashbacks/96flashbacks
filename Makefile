@@ -528,14 +528,14 @@ $(BUILD_DIR)/actors/%.o: OPT_FLAGS := -g
 $(BUILD_DIR)/bin/%.o: OPT_FLAGS := -g
 $(BUILD_DIR)/src/goddard/%.o: OPT_FLAGS := -g
 $(BUILD_DIR)/src/goddard/%.o: MIPSISET := -mips1
-$(BUILD_DIR)/lib/src/%.o: OPT_FLAGS :=
+$(BUILD_DIR)/lib/src/%.o: OPT_FLAGS := -g
 $(BUILD_DIR)/lib/src/math/ll%.o: MIPSISET := -mips3 -32
-$(BUILD_DIR)/lib/src/math/%.o: OPT_FLAGS := -O2
-$(BUILD_DIR)/lib/src/math/ll%.o: OPT_FLAGS :=
-$(BUILD_DIR)/lib/src/ldiv.o: OPT_FLAGS := -O2
-$(BUILD_DIR)/lib/src/string.o: OPT_FLAGS := -O2
-$(BUILD_DIR)/lib/src/gu%.o: OPT_FLAGS := -O3
-$(BUILD_DIR)/lib/src/al%.o: OPT_FLAGS := -O3
+$(BUILD_DIR)/lib/src/math/%.o: OPT_FLAGS := -g
+$(BUILD_DIR)/lib/src/math/ll%.o: OPT_FLAGS := -g
+$(BUILD_DIR)/lib/src/ldiv.o: OPT_FLAGS := -g
+$(BUILD_DIR)/lib/src/string.o: OPT_FLAGS := -g
+$(BUILD_DIR)/lib/src/gu%.o: OPT_FLAGS := -g
+$(BUILD_DIR)/lib/src/al%.o: OPT_FLAGS := -g
 
 ifeq ($(VERSION),eu)
 $(BUILD_DIR)/lib/src/_Litob.o: OPT_FLAGS := -O3
@@ -552,15 +552,15 @@ $(BUILD_DIR)/src/audio/port_eu.o: OPT_FLAGS := -O2
 $(BUILD_DIR)/src/audio/external.o: OPT_FLAGS := -O2 -Wo,-loopunroll,0
 else
 
-$(BUILD_DIR)/src/audio/%.o: OPT_FLAGS := -O2 -Wo,-loopunroll,0
-$(BUILD_DIR)/src/audio/load.o: OPT_FLAGS := -O2 -framepointer -Wo,-loopunroll,0
+$(BUILD_DIR)/src/audio/%.o: OPT_FLAGS := -g -Wo,-loopunroll,0
+$(BUILD_DIR)/src/audio/load.o: OPT_FLAGS := -g -framepointer -Wo,-loopunroll,0
 
 # The source-to-source optimizer copt is enabled for audio. This makes it use
 # acpp, which needs -Wp,-+ to handle C++-style comments.
 # All other files than external.c should really use copt, but only a few have
 # been matched so far.
-$(BUILD_DIR)/src/audio/effects.o: OPT_FLAGS := -O2 -Wo,-loopunroll,0 -sopt,-inline=sequence_channel_process_sound,-scalaroptimize=1 -Wp,-+
-$(BUILD_DIR)/src/audio/synthesis.o: OPT_FLAGS := -O2 -sopt,-scalaroptimize=1 -Wp,-+
+$(BUILD_DIR)/src/audio/effects.o: OPT_FLAGS := -g -Wo,-loopunroll,0 -sopt,-inline=sequence_channel_process_sound,-scalaroptimize=1 -Wp,-+
+$(BUILD_DIR)/src/audio/synthesis.o: OPT_FLAGS := -g -sopt,-scalaroptimize=1 -Wp,-+
 #$(BUILD_DIR)/src/audio/seqplayer.o: OPT_FLAGS := -O2 -sopt,-inline_manual,-scalaroptimize=1 -Wp,-+ #-Wo,-v,-bb,-l,seqplayer_list.txt
 
 # Add a target for build/eu/src/audio/*.copt to make it easier to see debug
