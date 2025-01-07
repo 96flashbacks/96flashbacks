@@ -528,14 +528,14 @@ $(BUILD_DIR)/actors/%.o: OPT_FLAGS := -g
 $(BUILD_DIR)/bin/%.o: OPT_FLAGS := -g
 $(BUILD_DIR)/src/goddard/%.o: OPT_FLAGS := -g
 $(BUILD_DIR)/src/goddard/%.o: MIPSISET := -mips1
-$(BUILD_DIR)/lib/src/%.o: OPT_FLAGS := -g
+$(BUILD_DIR)/lib/src/%.o: OPT_FLAGS :=
 $(BUILD_DIR)/lib/src/math/ll%.o: MIPSISET := -mips3 -32
-$(BUILD_DIR)/lib/src/math/%.o: OPT_FLAGS := -g
-$(BUILD_DIR)/lib/src/math/ll%.o: OPT_FLAGS := -g
-$(BUILD_DIR)/lib/src/ldiv.o: OPT_FLAGS := -g
-$(BUILD_DIR)/lib/src/string.o: OPT_FLAGS := -g
-$(BUILD_DIR)/lib/src/gu%.o: OPT_FLAGS := -g
-$(BUILD_DIR)/lib/src/al%.o: OPT_FLAGS := -g
+$(BUILD_DIR)/lib/src/math/%.o: OPT_FLAGS := -O1
+$(BUILD_DIR)/lib/src/math/ll%.o: OPT_FLAGS :=
+$(BUILD_DIR)/lib/src/ldiv.o: OPT_FLAGS := -O1
+$(BUILD_DIR)/lib/src/string.o: OPT_FLAGS := -O1
+$(BUILD_DIR)/lib/src/gu%.o: OPT_FLAGS := -O2
+$(BUILD_DIR)/lib/src/al%.o: OPT_FLAGS := -O2
 
 ifeq ($(VERSION),eu)
 $(BUILD_DIR)/lib/src/_Litob.o: OPT_FLAGS := -O3
