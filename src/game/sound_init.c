@@ -217,13 +217,6 @@ void set_background_music(u16 a, u16 seqArgs, s16 fadeTimer) {
     }
 }
 
-void fadeout_music(s16 fadeOutTime) {
-    func_803210D4(fadeOutTime);
-    sCurrentMusic = MUSIC_NONE;
-    sCurrentShellMusic = MUSIC_NONE;
-    sCurrentCapMusic = MUSIC_NONE;
-}
-
 void fadeout_level_music(s16 fadeTimer) {
     sequence_player_fade_out(0, fadeTimer);
     sCurrentMusic = MUSIC_NONE;

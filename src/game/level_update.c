@@ -226,7 +226,7 @@ void fade_into_special_warp(u32 arg, u32 color) {
         color = 0xFF;
     }
 
-    fadeout_music(190);
+    fadeout_level_music(190);
     play_transition(WARP_TRANSITION_FADE_INTO_COLOR, 0x10, color, color, color);
     level_set_transition(30, NULL);
 
@@ -642,7 +642,7 @@ void initiate_painting_warp(void) {
                 gMarioState->marioObj->header.gfx.node.flags &= ~GRAPH_RENDER_ACTIVE;
 
                 play_sound(SOUND_MENU_STAR_SOUND, gDefaultSoundArgs);
-                fadeout_music(398);
+                fadeout_level_music(398);
 #ifdef VERSION_SH
                 queue_rumble_data(80, 70);
                 func_sh_8024C89C(1);
@@ -768,7 +768,7 @@ s16 level_trigger_warp(struct MarioState *m, s32 warpOp) {
         }
 
         if (val04 && gCurrDemoInput == NULL) {
-            fadeout_music((3 * sDelayedWarpTimer / 2) * 8 - 2);
+            fadeout_level_music((3 * sDelayedWarpTimer / 2) * 8 - 2);
         }
     }
 

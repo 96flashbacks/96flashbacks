@@ -715,7 +715,7 @@ static void level_cmd_set_menu_music(void) {
 }
 
 static void level_cmd_38(void) {
-    fadeout_music(CMD_GET(s16, 2));
+    fadeout_level_music(CMD_GET(s16, 2));
     sCurrentCmd = CMD_NEXT;
 }
 
