@@ -22,14 +22,14 @@ Please contribute first to the [development branch](https://github.com/stalechil
 
 *dualsh0x* - playtesting
 
-*Redder* - animations
+*Guestpiki* - animations
 
 *lilmtit* - playtesting
 
 *xerox* - programming assistance, music
 
-*kl1z* - modelling contributions
-
 *SuperGarlic64* - texture contributions
+
+*TheRealDustinWijaya2006* - modelling contributions
 
 #### Original Super Mario 64 Decompilation Team
