@@ -142,16 +142,6 @@ s16 level_select_input_loop(void) {
 s32 intro_default(void) { // bolas lol
     s32 sp1C = 0;
 
-#ifndef VERSION_JP
-    if (D_U_801A7C34 == 1) {
-        if (gGlobalTimer < 0x81) {
-            play_sound(SOUND_MARIO_HELLO, gDefaultSoundArgs);
-        } else {
-            play_sound(SOUND_MARIO_PRESS_START_TO_PLAY, gDefaultSoundArgs);
-        }
-        D_U_801A7C34 = 0;
-    }
-#endif
     print_intro_text();
     {
         if (gPlayer1Controller->buttonDown == QUIT_LEVEL_SELECT_COMBO)
