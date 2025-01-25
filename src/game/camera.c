@@ -1566,7 +1566,7 @@ s32 update_boss_fight_camera(struct Camera *c, Vec3f focus, Vec3f pos) {
     struct Surface *floor;
     UNUSED u8 filler[20];
     Vec3f secondFocus;
-    Vec3f holdFocOffset = { 0.f, -150.f, -125.f };
+    Vec3f holdFocOffset = { 0.f, -0.f, -125.f };
 
     handle_c_button_movement(c);
 
@@ -1622,13 +1622,6 @@ s32 update_boss_fight_camera(struct Camera *c, Vec3f focus, Vec3f pos) {
         nz = floor->normal.z;
         oo = floor->originOffset;
         pos[1] = 300.f - (nx * pos[0] + nz * pos[2] + oo) / ny;
-        switch (gCurrLevelArea) {
-            case AREA_BOB:
-                pos[1] += 125.f;
-                //! fall through, makes the BoB boss fight camera move up twice as high as it should
-                // case AREA_WF:
-                // pos[1] += 125.f;
-        }
     }
 
     //! Must be same line to match on -O2
@@ -1653,8 +1646,7 @@ s32 update_boss_fight_camera(struct Camera *c, Vec3f focus, Vec3f pos) {
 
     focus[1] = (sMarioCamState->pos[1] + secondFocus[1]) / 2.f + 100.f;
     if (heldState == 1) {
-        focus[1] += 300.f
-                    * sins((gMarioStates[0].angleVel[1] > 0.f) ? gMarioStates[0].angleVel[1]
+        focus[1] += sins((gMarioStates[0].angleVel[1] > 0.f) ? gMarioStates[0].angleVel[1]
                                                                : -gMarioStates[0].angleVel[1]);
     }
 
