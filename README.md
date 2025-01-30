@@ -56,4 +56,4 @@ Please contribute first to the [development branch](https://github.com/96flashba
 
 *TheRealDustinWijaya2006*
 
-#### Original Super Mario 64 Decompilation Team
+### Original Super Mario 64 Decompilation Team
