@@ -1647,7 +1647,7 @@ s32 update_boss_fight_camera(struct Camera *c, Vec3f focus, Vec3f pos) {
     focus[1] = (sMarioCamState->pos[1] + secondFocus[1]) / 2.f + 100.f;
     if (heldState == 1) {
         focus[1] += sins((gMarioStates[0].angleVel[1] > 0.f) ? gMarioStates[0].angleVel[1]
-                                                               : -gMarioStates[0].angleVel[1]);
+                                                             : -gMarioStates[0].angleVel[1]);
     }
 
     //! Unnecessary conditional, focusDistance is already bounded to 800
@@ -6145,8 +6145,7 @@ void surface_type_modes_thi(struct Camera *c) {
 /**
  * Terminates a list of CameraTriggers.
  */
-#define NULL_TRIGGER                                                                                   \
-    { 0, NULL, 0, 0, 0, 0, 0, 0, 0 }
+#define NULL_TRIGGER { 0, NULL, 0, 0, 0, 0, 0, 0, 0 }
 
 /**
  * The SL triggers operate camera behavior in front of the snowman who blows air.

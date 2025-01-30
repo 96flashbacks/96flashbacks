@@ -153,8 +153,8 @@ Gfx *geo_exec_flying_carpet_create(s32 callContext, struct GraphNode *node, UNUS
         generatedNode->fnNode.node.flags = (generatedNode->fnNode.node.flags & 0xFF) | 0x100;
 
         for (n = 0; n <= 20; n++) {
-            //row = n / 3;
-            //col = n % 3;
+            // row = n / 3;
+            // col = n % 3;
 
             x = sp64[n * 4 + 0];
             y = 0;

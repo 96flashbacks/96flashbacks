@@ -16,7 +16,7 @@ struct SharedDma {
     /*0xC*/ u8 unused2;       // set to 0, never read
     /*0xD*/ u8 reuseIndex;    // position in sSampleDmaReuseQueue1/2, if ttl == 0
     /*0xE*/ u8 ttl;           // duration after which the DMA can be discarded
-};                            // size = 0x10
+}; // size = 0x10
 
 // EU only
 void port_eu_init(void);
