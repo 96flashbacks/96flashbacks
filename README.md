@@ -22,7 +22,7 @@ Please contribute first to the [development branch](https://github.com/96flashba
 
 #### Audio
 
-*K-Dubs*
+*`K-Dubs΄*
 
 *Sleekflash-16*
 
@@ -34,7 +34,7 @@ Please contribute first to the [development branch](https://github.com/96flashba
 
 *1up Guy*
 
-*K-Dubs*
+*`K-Dubs΄*
 
 #### Special Thanks To
 

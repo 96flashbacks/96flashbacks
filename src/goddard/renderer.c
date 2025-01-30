@@ -66,7 +66,7 @@ struct GdDisplayList {
     /*0x44*/ u32 number; // count
     /*0x48*/ u8 pad48[4];
     /*0x4C*/ struct GdDisplayList *parent; // not quite sure?
-};                                         /* sizeof = 0x50 */
+}; /* sizeof = 0x50 */
 // accessor macros for gd dl
 #define DL_CURRENT_VTX(dl) ((dl)->vtx[(dl)->curVtxIdx])
 #define DL_CURRENT_MTX(dl) ((dl)->mtx[(dl)->curMtxIdx])

@@ -519,7 +519,7 @@ s32 begin_braking_action(struct MarioState *m) {
     }
 
 #ifdef RELCAN
-        if (m->forwardVel <= 25.0f) {
+    if (m->forwardVel <= 25.0f) {
         return set_mario_action(m, ACT_IDLE, 0);
     } else {
         return set_mario_action(m, ACT_BRAKING, 0);
@@ -840,7 +840,7 @@ s32 act_walking(struct MarioState *m) {
     update_walking_speed(m);
 
 #ifdef RELCAN
-        if (m->actionState != 0 && (m->forwardVel < m->intendedMag * 1.0f))
+    if (m->actionState != 0 && (m->forwardVel < m->intendedMag * 1.0f))
         m->forwardVel = m->intendedMag * 1.0f;
 
     m->actionState = 0;
@@ -1422,8 +1422,8 @@ void common_slide_action(struct MarioState *m, u32 endAction, u32 airAction, s32
 
         case GROUND_STEP_HIT_WALL:
             if (!mario_floor_is_slippery(m)) {
-                //if (m->forwardVel > 16.0f) {
-                    //    m->particleFlags |= PARTICLE_VERTICAL_STAR;
+                // if (m->forwardVel > 16.0f) {
+                //     m->particleFlags |= PARTICLE_VERTICAL_STAR;
                 //}
                 slide_bonk(m, ACT_GROUND_BONK, endAction);
             } else if (m->wall != NULL) {

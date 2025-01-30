@@ -1013,8 +1013,8 @@ s32 act_spawn_spin_airborne(struct MarioState *m) {
     mario_set_forward_vel(m, m->forwardVel);
 
     // landed on floor, play spawn land animation
-#ifdef RELCAN 
-        switch (perform_air_step(m, 0)) {
+#ifdef RELCAN
+    switch (perform_air_step(m, 0)) {
         case AIR_STEP_LANDED:
             if (m->actionState++ == 0) {
                 m->vel[1] = 32.0f;
@@ -1033,7 +1033,7 @@ s32 act_spawn_spin_airborne(struct MarioState *m) {
         set_mario_action(m, ACT_SPAWN_SPIN_LANDING, 0);
     }
 #endif
-    
+
 #ifndef RELCAN
     // is 300 units above floor, spin and play woosh sounds
     if (m->actionState == 0 && m->pos[1] - m->floorHeight > 300.0f) {
@@ -1043,8 +1043,8 @@ s32 act_spawn_spin_airborne(struct MarioState *m) {
     }
 #endif
 
-#ifdef RELCAN   
-        if (m->actionState == 0 || m->vel[1] > 0.0f) {
+#ifdef RELCAN
+    if (m->actionState == 0 || m->vel[1] > 0.0f) {
         set_mario_animation(m, MARIO_ANIM_FORWARD_SPINNING);
     } else {
         set_mario_animation(m, MARIO_ANIM_GENERAL_FALL);
@@ -1116,8 +1116,7 @@ s32 act_exit_land_save_dialog(struct MarioState *m) {
             set_mario_animation(m, m->actionArg == 0 ? MARIO_ANIM_GENERAL_LAND
                                                      : MARIO_ANIM_LAND_FROM_SINGLE_JUMP);
             if (is_anim_past_end(m)) {
-                if (gLastCompletedCourseNum != COURSE_BITDW
-                    && gLastCompletedCourseNum != COURSE_BITFS 
+                if (gLastCompletedCourseNum != COURSE_BITDW && gLastCompletedCourseNum != COURSE_BITFS
                     && gLastCompletedCourseNum != COURSE_BITS) {
                     enable_time_stop();
                 }
@@ -1129,8 +1128,7 @@ s32 act_exit_land_save_dialog(struct MarioState *m) {
                 if (!(m->flags & MARIO_CAP_ON_HEAD)) {
                     m->actionState = 2; // star exit without cap
                 }
-                if (gLastCompletedCourseNum == COURSE_BITDW
-                    || gLastCompletedCourseNum == COURSE_BITFS
+                if (gLastCompletedCourseNum == COURSE_BITDW || gLastCompletedCourseNum == COURSE_BITFS
                     || gLastCompletedCourseNum == COURSE_BITS) {
                     m->actionState = 1; // key exit
                 }

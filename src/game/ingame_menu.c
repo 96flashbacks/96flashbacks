@@ -2632,7 +2632,9 @@ void print_hud_course_complete_coins(s16 x, s16 y) {
             }
         }
 
-        if (gHudDisplay.coins == gCourseCompleteCoins /* && gGotFileCoinHiScore */) { // TO-DO: come back to that last variable
+        if (gHudDisplay.coins
+            == gCourseCompleteCoins /* && gGotFileCoinHiScore */) { // TO-DO: come back to that last
+                                                                    // variable
             play_sound(SOUND_MENU_MARIO_CASTLE_WARP2, gDefaultSoundArgs);
         }
     }

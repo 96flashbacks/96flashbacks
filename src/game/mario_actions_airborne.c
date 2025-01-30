@@ -1345,7 +1345,7 @@ s32 act_air_hit_wall(struct MarioState *m) {
 #endif
         set_mario_animation(m, MARIO_ANIM_START_WALLKICK);
 #ifdef RELCAN
-        return 0;
+    return 0;
 #endif
 
     //! Missing return statement. The returned value is the result of the call

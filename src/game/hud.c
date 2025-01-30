@@ -302,18 +302,18 @@ void render_hud_stars(void) {
     print_text(188, 210, "*"); // 'X' glyph
     print_text_fmt_int(202, 210, "%d", gHudDisplay.stars);
 #else
-    //s8 showX = 1;
+    // s8 showX = 1;
 
     if (gHudFlash == 1 && gGlobalTimer & 0x08) {
         return;
     }
 
-    print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(77), HUD_TOP_Y, "-"); // 'Star' glyph
-    //if (showX == 1) {
-        print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(77) + 16, HUD_TOP_Y, "*"); // 'X' glyph
+    print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(77), HUD_TOP_Y, "-");      // 'Star' glyph
+                                                                              // if (showX == 1) {
+    print_text(GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(77) + 16, HUD_TOP_Y, "*"); // 'X' glyph
     //}
-    print_text_fmt_int((/* showX * */ 14) + GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(77 - 16), HUD_TOP_Y, "%d",
-                       gHudDisplay.stars);
+    print_text_fmt_int((/* showX * */ 14) + GFX_DIMENSIONS_RECT_FROM_RIGHT_EDGE(77 - 16), HUD_TOP_Y,
+                       "%d", gHudDisplay.stars);
 #endif
 }
 
@@ -333,13 +333,13 @@ void render_hud_keys(void) {
  * Renders the timer when Mario start sliding in PSS.
  */
 void render_hud_timer(void) {
-    //u8 *(*hudLUT)[58];
+    // u8 *(*hudLUT)[58];
     u16 timerValFrames;
     u16 timerMins;
     u16 timerSecs;
     u16 timerFracSecs;
 
-    //hudLUT = segmented_to_virtual(&main_hud_lut);
+    // hudLUT = segmented_to_virtual(&main_hud_lut);
 
     timerValFrames = gHudDisplay.timer;
 #ifdef VERSION_EU
