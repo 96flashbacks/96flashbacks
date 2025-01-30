@@ -160,7 +160,7 @@ void handle_nmi_request(void) {
     D_8032C648 = 0;
     func_80320890();
     sound_banks_disable(2, 0x037A);
-    fadeout_music(90);
+    fadeout_level_music(90);
 #ifdef VERSION_SH
     func_sh_802F69CC();
 #endif

@@ -42,7 +42,7 @@ const GeoLayout castle_geo_0019F8[] = {
    GEO_OPEN_NODE(),
       GEO_DISPLAY_LIST(LAYER_OPAQUE, inside_castle_seg7_dl_07066CE0),
       GEO_DISPLAY_LIST(LAYER_TRANSPARENT, inside_castle_seg7_dl_07066E90),
-      GEO_DISPLAY_LIST(LAYER_ALPHA, inside_castle_seg7_dl_07066FA0),
+      GEO_DISPLAY_LIST(LAYER_ALPHA, inside_castle_seg7_dl_07066FA0), // i wanna know wtf this is
       GEO_ASM(   0, geo_movtex_pause_control),
       GEO_ASM(0x0612, geo_movtex_draw_water_regions),
    GEO_CLOSE_NODE(),

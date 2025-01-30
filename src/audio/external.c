@@ -2312,31 +2312,17 @@ void play_toads_jingle(void) {
     func_803200E4(50);
 }
 
+/**
+ * Called from threads: thread5_game_loop
+ */
 void sound_reset(u8 presetId) {
-#ifndef VERSION_JP
-    if (presetId >= 8) {
-        presetId = 0;
-        sUnused8033323C = 0;
-    }
-#endif
-    sGameLoopTicked = 0;
-    disable_all_sequence_players();
+    u8 i;
+
     sound_init();
-#if defined(VERSION_JP) || defined(VERSION_US) || defined(VERSION_SH)
-    audio_reset_session(&gAudioSessionPresets[presetId]);
-#else
-    audio_reset_session_eu(presetId);
-#endif
-    osWritebackDCacheAll();
-    if (presetId != 7) {
-        preload_sequence(SEQ_EVENT_SOLVE_PUZZLE, PRELOAD_BANKS | PRELOAD_SEQUENCE);
-        preload_sequence(SEQ_EVENT_PEACH_MESSAGE, PRELOAD_BANKS | PRELOAD_SEQUENCE);
-        preload_sequence(SEQ_EVENT_CUTSCENE_STAR_SPAWN, PRELOAD_BANKS | PRELOAD_SEQUENCE);
+
+    for (i = 0; i < SEQUENCE_PLAYERS; i++) {
+        gSequencePlayers[i].muted = FALSE;
     }
-    play_sequence(SEQ_PLAYER_SFX, SEQ_SOUND_PLAYER, 0);
-    D_80332108 = (D_80332108 & 0xf0) + presetId;
-    gSoundMode = D_80332108 >> 4;
-    sHasStartedFadeOut = FALSE;
 }
 
 void audio_set_sound_mode(u8 soundMode) {

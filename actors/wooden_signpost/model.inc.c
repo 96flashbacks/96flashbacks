@@ -1,148 +1,110 @@
-// Signpost
+// Lights
+Lights1 wooden_signpost_lights = gdSPDefLights1(
+	0x7F, 0x7F, 0x7F,
+	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
-// 0x0302C940
-static const Lights1 wooden_signpost_seg3_lights_0302C940 = gdSPDefLights1(
-    0x7f, 0x7f, 0x7f,
-    0xff, 0xff, 0xff, 0x28, 0x28, 0x28
-);
-
-// 0x0302C958
-static const Vtx wooden_signpost_seg3_vertex_0302C958[] = {
-    {{{     0,    504,     19}, 0, {   962,    478}, {0x00, 0x7e, 0xfc, 0xff}}},
-    {{{    24,    490,     34}, 0, {   938,    780}, {0x62, 0x3b, 0x36, 0xff}}},
-    {{{     0,    490,     -6}, 0, {   938,    478}, {0xff, 0x39, 0x90, 0xff}}},
-    {{{   -23,    490,     34}, 0, {   938,    178}, {0x9e, 0x3a, 0x36, 0xff}}},
-    {{{     0,    -39,     34}, 0, {    36,    478}, {0x00, 0xfc, 0x7e, 0xff}}},
-    {{{   -23,    -39,     -6}, 0, {    36,    178}, {0x93, 0x00, 0xc1, 0xff}}},
-    {{{    24,    -39,     -6}, 0, {    36,    780}, {0x6d, 0x00, 0xc0, 0xff}}},
-};
-
-// 0x0302C9C8
+// Textures
 ALIGNED8 static const u8 wooden_signpost_seg3_texture_0302C9C8[] = {
 #include "actors/wooden_signpost/wooden_signpost_back.rgba16.inc.c"
 };
 
-// 0x0302D1C8
 ALIGNED8 static const u8 wooden_signpost_seg3_texture_0302D1C8[] = {
 #include "actors/wooden_signpost/wooden_signpost_front.rgba16.inc.c"
 };
 
-// 0x0302D9C8 - 0x0302DA48
-const Gfx wooden_signpost_seg3_dl_0302D9C8[] = {
-    gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, wooden_signpost_seg3_texture_0302C9C8),
-    gsDPLoadSync(),
-    gsDPLoadBlock(G_TX_LOADTILE, 0, 0, 32 * 32 - 1, CALC_DXT(32, G_IM_SIZ_16b_BYTES)),
-    gsSPLight(&wooden_signpost_seg3_lights_0302C940.l, 1),
-    gsSPLight(&wooden_signpost_seg3_lights_0302C940.a, 2),
-    gsSPVertex(wooden_signpost_seg3_vertex_0302C958, 7, 0),
-    gsSP2Triangles( 0,  1,  2, 0x0,  2,  3,  0, 0x0),
-    gsSP2Triangles( 0,  3,  1, 0x0,  4,  1,  3, 0x0),
-    gsSP2Triangles( 3,  5,  4, 0x0,  5,  3,  2, 0x0),
-    gsSP2Triangles( 2,  6,  5, 0x0,  1,  4,  6, 0x0),
-    gsSP1Triangle( 6,  2,  1, 0x0),
-    gsSPEndDisplayList(),
+// Materials
+Gfx mat_wooden_back[] = {
+	gsSPSetLights1(wooden_signpost_lights),
+	gsDPPipeSync(),
+	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
+	gsSPTexture(65535, 65535, 0, 0, 1),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, wooden_signpost_seg3_texture_0302C9C8),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
+	gsDPLoadBlock(7, 0, 0, 1023, 256),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
+	gsDPSetTileSize(0, 0, 0, 124, 124),
+	gsSPEndDisplayList(),
 };
 
-// 0x0302DA48 - 0x0302DAA8
-const Gfx wooden_signpost_seg3_dl_0302DA48[] = {
-    gsDPPipeSync(),
-    gsDPSetCombineMode(G_CC_MODULATERGB, G_CC_MODULATERGB),
-    gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 0, 0, G_TX_LOADTILE, 0, G_TX_WRAP | G_TX_NOMIRROR, G_TX_NOMASK, G_TX_NOLOD, G_TX_WRAP | G_TX_NOMIRROR, G_TX_NOMASK, G_TX_NOLOD),
-    gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON),
-    gsDPTileSync(),
-    gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, G_TX_RENDERTILE, 0, G_TX_CLAMP, 5, G_TX_NOLOD, G_TX_CLAMP, 5, G_TX_NOLOD),
-    gsDPSetTileSize(0, 0, 0, (32 - 1) << G_TEXTURE_IMAGE_FRAC, (32 - 1) << G_TEXTURE_IMAGE_FRAC),
-    gsSPDisplayList(wooden_signpost_seg3_dl_0302D9C8),
-    gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_OFF),
-    gsDPPipeSync(),
-    gsDPSetCombineMode(G_CC_SHADE, G_CC_SHADE),
-    gsSPEndDisplayList(),
+Gfx mat_wooden_front[] = {
+	gsSPSetLights1(wooden_signpost_lights),
+	gsDPPipeSync(),
+	gsDPSetCombineLERP(TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, 0, 0, 0, 0, ENVIRONMENT),
+	gsSPTexture(65535, 65535, 0, 0, 1),
+	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, wooden_signpost_seg3_texture_0302D1C8),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
+	gsDPLoadBlock(7, 0, 0, 1023, 256),
+	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0),
+	gsDPSetTileSize(0, 0, 0, 124, 124),
+	gsSPEndDisplayList(),
 };
 
-// 0x0302DAA8
-static const Lights1 wooden_signpost_seg3_lights_0302DAA8 = gdSPDefLights1(
-    0x7f, 0x7f, 0x7f,
-    0xff, 0xff, 0xff, 0x28, 0x28, 0x28
-);
-
-// 0x0302DAC0
-static const Vtx wooden_signpost_seg3_vertex_0302DAC0[] = {
-    {{{   180,    260,     20}, 0, {   990,    990}, {0x00, 0x81, 0x00, 0xff}}},
-    {{{  -179,    260,     60}, 0, {     0,    990}, {0x00, 0x81, 0x00, 0xff}}},
-    {{{  -179,    260,     20}, 0, {     0,    990}, {0x00, 0x81, 0x00, 0xff}}},
-    {{{   180,    260,     20}, 0, {   990,    990}, {0x00, 0x00, 0x81, 0xff}}},
-    {{{  -179,    260,     20}, 0, {     0,    990}, {0x00, 0x00, 0x81, 0xff}}},
-    {{{  -179,    460,     20}, 0, {     0,      0}, {0x00, 0x00, 0x81, 0xff}}},
-    {{{  -179,    260,     20}, 0, {     0,    990}, {0x81, 0x00, 0x00, 0xff}}},
-    {{{  -179,    260,     60}, 0, {     0,    990}, {0x81, 0x00, 0x00, 0xff}}},
-    {{{  -179,    460,     60}, 0, {     0,      0}, {0x81, 0x00, 0x00, 0xff}}},
-    {{{  -179,    460,     20}, 0, {     0,      0}, {0x81, 0x00, 0x00, 0xff}}},
-    {{{   180,    260,     60}, 0, {   990,    990}, {0x00, 0x81, 0x00, 0xff}}},
-    {{{  -179,    460,     20}, 0, {     0,      0}, {0x00, 0x7f, 0x00, 0xff}}},
-    {{{  -179,    460,     60}, 0, {     0,      0}, {0x00, 0x7f, 0x00, 0xff}}},
-    {{{   180,    460,     60}, 0, {   990,      0}, {0x00, 0x7f, 0x00, 0xff}}},
-    {{{   180,    460,     20}, 0, {   990,      0}, {0x00, 0x00, 0x81, 0xff}}},
-    {{{   180,    460,     20}, 0, {   990,      0}, {0x00, 0x7f, 0x00, 0xff}}},
+// Vtx Data
+Vtx wooden_signpost_mesh_vtx_0[15] = {
+	{{ {-23, 490, 34}, 0, {922, 162}, {158, 56, 58, 255} }},
+	{{ {-23, -39, -6}, 0, {20, 162}, {147, 252, 191, 255} }},
+	{{ {0, -39, 34}, 0, {20, 462}, {255, 247, 127, 255} }},
+	{{ {0, 490, -6}, 0, {922, 462}, {255, 56, 142, 255} }},
+	{{ {0, 504, 19}, 0, {946, 462}, {255, 127, 250, 255} }},
+	{{ {24, 490, 34}, 0, {922, 764}, {98, 56, 57, 255} }},
+	{{ {24, -39, -6}, 0, {20, 764}, {110, 252, 192, 255} }},
+	{{ {180, 260, 20}, 0, {974, 974}, {73, 183, 183, 255} }},
+	{{ {-179, 260, 60}, 0, {-16, 974}, {183, 183, 73, 255} }},
+	{{ {-179, 260, 20}, 0, {-16, 974}, {183, 183, 183, 255} }},
+	{{ {180, 260, 60}, 0, {974, 974}, {73, 183, 73, 255} }},
+	{{ {180, 460, 20}, 0, {974, -16}, {73, 73, 183, 255} }},
+	{{ {-179, 460, 20}, 0, {-16, -16}, {183, 73, 183, 255} }},
+	{{ {-179, 460, 60}, 0, {-16, -16}, {183, 73, 73, 255} }},
+	{{ {180, 460, 60}, 0, {974, -16}, {73, 73, 73, 255} }},
 };
 
-// 0x0302DBC0
-static const Vtx wooden_signpost_seg3_vertex_0302DBC0[] = {
-    {{{   180,    260,     60}, 0, {   990,    990}, {0x7f, 0x00, 0x00, 0xff}}},
-    {{{   180,    460,     20}, 0, {   990,      0}, {0x7f, 0x00, 0x00, 0xff}}},
-    {{{   180,    460,     60}, 0, {   990,      0}, {0x7f, 0x00, 0x00, 0xff}}},
-    {{{   180,    260,     20}, 0, {   990,    990}, {0x7f, 0x00, 0x00, 0xff}}},
+Gfx wooden_signpost_mesh_tri_0[] = {
+	gsSPVertex(wooden_signpost_mesh_vtx_0 + 0, 15, 0),
+	gsSP1Triangle(0, 1, 2, 0),
+	gsSP1Triangle(1, 0, 3, 0),
+	gsSP1Triangle(3, 0, 4, 0),
+	gsSP1Triangle(4, 0, 5, 0),
+	gsSP1Triangle(2, 5, 0, 0),
+	gsSP1Triangle(5, 2, 6, 0),
+	gsSP1Triangle(6, 3, 5, 0),
+	gsSP1Triangle(3, 6, 1, 0),
+	gsSP1Triangle(4, 5, 3, 0),
+	gsSP1Triangle(7, 8, 9, 0),
+	gsSP1Triangle(7, 10, 8, 0),
+	gsSP1Triangle(10, 7, 11, 0),
+	gsSP1Triangle(7, 12, 11, 0),
+	gsSP1Triangle(7, 9, 12, 0),
+	gsSP1Triangle(9, 13, 12, 0),
+	gsSP1Triangle(9, 8, 13, 0),
+	gsSP1Triangle(12, 13, 14, 0),
+	gsSP1Triangle(12, 14, 11, 0),
+	gsSP1Triangle(10, 11, 14, 0),
+	gsSPEndDisplayList(),
 };
 
-// 0x0302DC00
-static const Vtx wooden_signpost_seg3_vertex_0302DC00[] = {
-    {{{  -179,    260,     60}, 0, {     0,    990}, {0x00, 0x00, 0x7f, 0xff}}},
-    {{{   180,    460,     60}, 0, {   990,      0}, {0x00, 0x00, 0x7f, 0xff}}},
-    {{{  -179,    460,     60}, 0, {     0,      0}, {0x00, 0x00, 0x7f, 0xff}}},
-    {{{   180,    260,     60}, 0, {   990,    990}, {0x00, 0x00, 0x7f, 0xff}}},
+Vtx wooden_signpost_mesh_vtx_1[4] = {
+	{{ {-179, 260, 60}, 0, {-16, 974}, {183, 183, 73, 255} }},
+	{{ {180, 460, 60}, 0, {974, -16}, {73, 73, 73, 255} }},
+	{{ {-179, 460, 60}, 0, {-16, -16}, {183, 73, 73, 255} }},
+	{{ {180, 260, 60}, 0, {974, 974}, {73, 183, 73, 255} }},
 };
 
-// 0x0302DC40 - 0x0302DCD0
-const Gfx wooden_signpost_seg3_dl_0302DC40[] = {
-    gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, wooden_signpost_seg3_texture_0302C9C8),
-    gsDPLoadSync(),
-    gsDPLoadBlock(G_TX_LOADTILE, 0, 0, 32 * 32 - 1, CALC_DXT(32, G_IM_SIZ_16b_BYTES)),
-    gsSPLight(&wooden_signpost_seg3_lights_0302DAA8.l, 1),
-    gsSPLight(&wooden_signpost_seg3_lights_0302DAA8.a, 2),
-    gsSPVertex(wooden_signpost_seg3_vertex_0302DAC0, 16, 0),
-    gsSP2Triangles( 0,  1,  2, 0x0,  3,  4,  5, 0x0),
-    gsSP2Triangles( 6,  7,  8, 0x0,  6,  8,  9, 0x0),
-    gsSP2Triangles( 0, 10,  1, 0x0, 11, 12, 13, 0x0),
-    gsSP2Triangles( 3,  5, 14, 0x0, 11, 13, 15, 0x0),
-    gsSPVertex(wooden_signpost_seg3_vertex_0302DBC0, 4, 0),
-    gsSP2Triangles( 0,  1,  2, 0x0,  0,  3,  1, 0x0),
-    gsSPEndDisplayList(),
+Gfx wooden_signpost_mesh_tri_1[] = {
+	gsSPVertex(wooden_signpost_mesh_vtx_1 + 0, 4, 0),
+	gsSP1Triangle(0, 1, 2, 0),
+	gsSP1Triangle(0, 3, 1, 0),
+	gsSPEndDisplayList(),
 };
 
-// 0x0302DCD0 - 0x0302DD08
-const Gfx wooden_signpost_seg3_dl_0302DCD0[] = {
-    gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, wooden_signpost_seg3_texture_0302D1C8),
-    gsDPLoadSync(),
-    gsDPLoadBlock(G_TX_LOADTILE, 0, 0, 32 * 32 - 1, CALC_DXT(32, G_IM_SIZ_16b_BYTES)),
-    gsSPVertex(wooden_signpost_seg3_vertex_0302DC00, 4, 0),
-    gsSP2Triangles( 0,  1,  2, 0x0,  0,  3,  1, 0x0),
-    gsSPEndDisplayList(),
-};
-
-// 0x0302DD08 - 0x0302DD80
-const Gfx wooden_signpost_seg3_dl_0302DD08[] = {
-    gsDPPipeSync(),
-    gsDPSetCombineMode(G_CC_MODULATERGB, G_CC_MODULATERGB),
-    gsSPClearGeometryMode(G_SHADING_SMOOTH),
-    gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 0, 0, G_TX_LOADTILE, 0, G_TX_WRAP | G_TX_NOMIRROR, G_TX_NOMASK, G_TX_NOLOD, G_TX_WRAP | G_TX_NOMIRROR, G_TX_NOMASK, G_TX_NOLOD),
-    gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_ON),
-    gsDPTileSync(),
-    gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 8, 0, G_TX_RENDERTILE, 0, G_TX_CLAMP, 5, G_TX_NOLOD, G_TX_CLAMP, 5, G_TX_NOLOD),
-    gsDPSetTileSize(0, 0, 0, (32 - 1) << G_TEXTURE_IMAGE_FRAC, (32 - 1) << G_TEXTURE_IMAGE_FRAC),
-    gsSPDisplayList(wooden_signpost_seg3_dl_0302DC40),
-    gsSPDisplayList(wooden_signpost_seg3_dl_0302DCD0),
-    gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_OFF),
-    gsDPPipeSync(),
-    gsDPSetCombineMode(G_CC_SHADE, G_CC_SHADE),
-    gsSPSetGeometryMode(G_SHADING_SMOOTH),
-    gsSPEndDisplayList(),
+Gfx wooden_signpost_mesh[] = {
+	gsSPDisplayList(mat_wooden_back),
+	gsSPDisplayList(wooden_signpost_mesh_tri_0),
+	gsSPDisplayList(mat_wooden_front),
+	gsSPDisplayList(wooden_signpost_mesh_tri_1),
+	gsDPPipeSync(),
+	gsSPSetGeometryMode(G_LIGHTING),
+	gsSPClearGeometryMode(G_TEXTURE_GEN),
+	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
+	gsSPTexture(65535, 65535, 0, 0, 0),
+	gsSPEndDisplayList(),
 };

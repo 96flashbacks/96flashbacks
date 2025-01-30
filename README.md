@@ -2,32 +2,58 @@
 
 This repo contains a modified decompilation of Super Mario 64 which aims to interpret a late development build of the game.
 
-Please contribute first to the [development branch](https://github.com/stalechilibeans/96flashbacks/tree/development/). Things will be merged to the main branch once enough changes have been added for a new release.
+Please contribute first to the [development branch](https://github.com/96flashbacks/pre-e3/tree/development/). Things will be merged to the main branch once enough changes have been added for a new release.
 
 ## Credits
 
-#### 96flashbacks Developer Team
-*stalechilibeans* - programming, research, models, sound effects
+### '96flashbacks' Team
 
-*1up Guy* - programming, textures, animations
+#### Programming
 
-*K-Dubs* - sound effects, music, textures
+*stalechilibeans*
 
-*Scraps* - being the wildest doggy plum
+*1up Guy*
 
-*Sleekflash-16* - sound effects, playtesting
+#### Textures
+
+*1up Guy*
+
+*`K-Dubs΄*
+
+#### Audio
+
+*K-Dubs*
+
+*Sleekflash-16*
+
+#### Research & Playtesting
+
+*Scraps*
+
+*stalechilibeans*
+
+*1up Guy*
+
+*K-Dubs*
 
 #### Special Thanks To
-*iProgramInCpp* - programming assistance
 
-*dualsh0x* - playtesting
+*iProgramInCpp*
 
-*Redder* - animations
+*godly*
 
-*lilmtit* - playtesting
+*dualsh0x*
 
-*xerox* - programming assistance, music
+*Guestpiki*
 
-*kl1z* - modelling assistance
+*lilmtit*
 
-#### Original Super Mario 64 Decompilation Team
+*xerox*
+
+*SuperGarlic64*
+
+*elinspectorardilla*
+
+*TheRealDustinWijaya2006*
+
+### Original Super Mario 64 Decompilation Team

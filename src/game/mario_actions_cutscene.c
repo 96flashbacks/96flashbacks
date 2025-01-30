@@ -1117,7 +1117,8 @@ s32 act_exit_land_save_dialog(struct MarioState *m) {
                                                      : MARIO_ANIM_LAND_FROM_SINGLE_JUMP);
             if (is_anim_past_end(m)) {
                 if (gLastCompletedCourseNum != COURSE_BITDW
-                    && gLastCompletedCourseNum != COURSE_BITFS) {
+                    && gLastCompletedCourseNum != COURSE_BITFS 
+                    && gLastCompletedCourseNum != COURSE_BITS) {
                     enable_time_stop();
                 }
 
@@ -1129,7 +1130,8 @@ s32 act_exit_land_save_dialog(struct MarioState *m) {
                     m->actionState = 2; // star exit without cap
                 }
                 if (gLastCompletedCourseNum == COURSE_BITDW
-                    || gLastCompletedCourseNum == COURSE_BITFS) {
+                    || gLastCompletedCourseNum == COURSE_BITFS
+                    || gLastCompletedCourseNum == COURSE_BITS) {
                     m->actionState = 1; // key exit
                 }
             }
