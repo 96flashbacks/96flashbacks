@@ -6,30 +6,54 @@ Please contribute first to the [development branch](https://github.com/96flashba
 
 ## Credits
 
-#### 96flashbacks Developer Team
-*stalechilibeans* - programming, research, models, sound effects
+### '96flashbacks' Team
 
-*1up Guy* - programming, textures, animations
+#### Programming
 
-*K-Dubs* - sound effects, music, textures
+*stalechilibeans*
 
-*Scraps* - being the wildest doggy plum
+*1up Guy*
 
-*Sleekflash-16* - sound effects, playtesting
+#### Textures
+
+*1up Guy*
+
+*`K-Dubs΄*
+
+#### Audio
+
+*K-Dubs*
+
+*Sleekflash-16*
+
+#### Research & Playtesting
+
+*Scraps*
+
+*stalechilibeans*
+
+*1up Guy*
+
+*K-Dubs*
 
 #### Special Thanks To
-*iProgramInCpp* - programming assistance
 
-*dualsh0x* - playtesting
+*iProgramInCpp*
 
-*Guestpiki* - animations
+*godly*
 
-*lilmtit* - playtesting
+*dualsh0x*
 
-*xerox* - programming assistance, music
+*Guestpiki*
 
-*SuperGarlic64* - texture contributions
+*lilmtit*
 
-*TheRealDustinWijaya2006* - modelling contributions
+*xerox*
+
+*SuperGarlic64*
+
+*elinspectorardilla*
+
+*TheRealDustinWijaya2006*
 
 #### Original Super Mario 64 Decompilation Team
