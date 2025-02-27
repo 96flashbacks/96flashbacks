@@ -14,43 +14,7 @@
             [32700, 29430],
             "hang"
         ],
-        "envelope2": [
-            [2, 32700],
-            [205, 1651],
-            [211, 0],
-            "hang"
-        ],
-        "envelope3": [
-            [2, 32700],
-            [205, 1651],
-            [211, 0],
-            "hang"
-        ],
-        "envelope4": [
-            [2, 32700],
-            [205, 1651],
-            [211, 0],
-            "hang"
-        ],
-        "envelope5": [
-            [2, 32700],
-            [205, 1651],
-            [211, 0],
-            "hang"
-        ],
         "envelope6": [
-            [2, 32700],
-            [1, 32700],
-            [32700, 29430],
-            "hang"
-        ],
-        "envelope7": [
-            [2, 32700],
-            [1, 32700],
-            [32700, 29430],
-            "hang"
-        ],
-        "envelope8": [
             [2, 32700],
             [1, 32700],
             [32700, 29430],
@@ -72,12 +36,6 @@
             [2, 32700],
             [55, 32700],
             [127, 0],
-            "hang"
-        ],
-        "envelope12": [
-            [2, 32700],
-            [1, 32700],
-            [32700, 29430],
             "hang"
         ],
         "envelope13": [
@@ -106,56 +64,10 @@
             "sound": "3C",
             "sound_hi": "3D"
         },
-        "inst2": {
-            "release_rate": 38,
-            "normal_range_lo": 29,
-            "normal_range_hi": 61,
-            "envelope": "envelope2",
-            "sound_lo": "3B",
-            "sound": "3C",
-            "sound_hi": "3D"
-        },
-        "inst3": {
-            "release_rate": 38,
-            "normal_range_lo": 29,
-            "normal_range_hi": 61,
-            "envelope": "envelope3",
-            "sound_lo": "3B",
-            "sound": "3C",
-            "sound_hi": "3D"
-        },
-        "inst4": {
-            "release_rate": 38,
-            "normal_range_lo": 29,
-            "normal_range_hi": 61,
-            "envelope": "envelope4",
-            "sound_lo": "3B",
-            "sound": "3C",
-            "sound_hi": "3D"
-        },
-        "inst5": {
-            "release_rate": 38,
-            "normal_range_lo": 29,
-            "normal_range_hi": 61,
-            "envelope": "envelope5",
-            "sound_lo": "3B",
-            "sound": "3C",
-            "sound_hi": "3D"
-        },
         "inst6": {
             "release_rate": 208,
             "envelope": "envelope6",
-            "sound": "21"
-        },
-        "inst7": {
-            "release_rate": 114,
-            "envelope": "envelope7",
-            "sound": "34"
-        },
-        "inst8": {
-            "release_rate": 208,
-            "envelope": "envelope8",
-            "sound": "34"
+            "sound": "3D"
         },
         "percussion": [
             {"release_rate": 10, "pan": 62, "envelope": "envelope9", "sound": {"sample": "06", "tuning": 0.210224}},
@@ -240,13 +152,9 @@
             "sound": "13"
         },
         "inst11": {
-            "release_rate": 208,
-            "normal_range_lo": 60,
-            "normal_range_hi": 60,
-            "envelope": "envelope12",
-            "sound_lo": "1E",
-            "sound": "1F",
-            "sound_hi": "20"
+            "release_rate": 10,
+            "envelope": "envelope13",
+            "sound": "42"
         },
         "inst12": {
             "release_rate": 10,
@@ -257,19 +165,19 @@
     "instrument_list": [
         "inst0",
         "inst1",
-        "inst2",
-        "inst3",
-        "inst4",
-        "inst5",
+        null,
+        null,
+        null,
+        null,
         "inst6",
-        "inst7",
-        "inst8",
         null,
         null,
-        "inst9",
+        null,
         "inst10",
-        "inst11",
+        "inst9",
         null,
+        null,
+        "inst11",
         "inst12"
     ]
 }
