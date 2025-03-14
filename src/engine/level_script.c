@@ -710,7 +710,7 @@ static void level_cmd_set_music(void) {
 }
 
 static void level_cmd_set_menu_music(void) {
-    set_background_music(0, CMD_GET(s16, 2), 0);
+    set_background_music(CMD_GET(s16, 2), 0);
     sCurrentCmd = CMD_NEXT;
 }
 

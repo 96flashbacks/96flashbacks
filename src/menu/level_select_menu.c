@@ -187,7 +187,7 @@ s32 intro_game_over(void) {
 }
 
 s32 intro_play_its_a_me_mario(void) {
-    set_background_music(0, SEQ_SOUND_PLAYER, 0);
+    set_background_music(SEQ_SOUND_PLAYER, 0);
 #ifdef NINTENDO_LOGO
     play_sound(SOUND_GENERAL_COIN, gDefaultSoundArgs);
 #else
