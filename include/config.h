@@ -45,7 +45,7 @@
 //#define RELCAN
 //#define NINTENDO_LOGO
 //#define INTRO
-#define DEBUG
+//#define DEBUG
 
 #if defined(FEBRUARY) || defined(DECEMBER)
 #define NINTENDO_LOGO
