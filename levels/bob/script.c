@@ -46,8 +46,7 @@ static const LevelScript script_func_local_2[] = {
 static const LevelScript script_func_local_3[] = {
     OBJECT_WITH_ACTS(/*model*/ MODEL_KING_BOBOMB,           /*pos*/  1636, 4242, -5567, /*angle*/ 0, -147, 0, /*behParam*/ 0x00000000, /*beh*/ bhvKingBobomb,            /*acts*/ ACT_1),
     OBJECT_WITH_ACTS(/*model*/ MODEL_KOOPA_WITH_SHELL,      /*pos*/ -3000,  121,  5300, /*angle*/ 0, 0, 0,    /*behParam*/ 0x02020000, /*beh*/ bhvKoopa,                 /*acts*/ ACT_3),
-    //OBJECT_WITH_ACTS(/*model*/ MODEL_STAR,                  /*pos*/  -600, 4400,   600, /*angle*/ 0, 0, 0,    /*behParam*/ 0x03000000, /*beh*/ bhvStar,     /*acts*/ ACT_4), //gigaleak island star position
-    OBJECT_WITH_ACTS(/*model*/ MODEL_NONE,                  /*pos*/  -350, 4400,   399, /*angle*/ 0, 0, 0,    /*behParam*/ 0x03040000, /*beh*/ bhvHiddenStar,            /*acts*/ ALL_ACTS), 
+    OBJECT_WITH_ACTS(/*model*/ MODEL_NONE,                  /*pos*/  -600, 4400,   600, /*angle*/ 0, 0, 0,    /*behParam*/ 0x03040000, /*beh*/ bhvHiddenStar,            /*acts*/ ALL_ACTS), 
     OBJECT_WITH_ACTS(/*model*/ MODEL_STAR,                  /*pos*/  1550, 1200,   300, /*angle*/ 0, 0, 0,    /*behParam*/ 0x04000000, /*beh*/ bhvStar,                  /*acts*/ ALL_ACTS),
     RETURN(),
 };
@@ -88,7 +87,7 @@ const LevelScript level_bob_entry[] = {
         WARP_NODE(/*id*/ 0x0E, /*destLevel*/ LEVEL_BOB, /*destArea*/ 0x01, /*destNode*/ 0x0D, /*flags*/ WARP_NO_CHECKPOINT),
         WARP_NODE(/*id*/ 0xF0, /*destLevel*/ LEVEL_CASTLE, /*destArea*/ 0x01, /*destNode*/ 0x32, /*flags*/ WARP_NO_CHECKPOINT),
         WARP_NODE(/*id*/ 0xF1, /*destLevel*/ LEVEL_CASTLE, /*destArea*/ 0x01, /*destNode*/ 0x64, /*flags*/ WARP_NO_CHECKPOINT),
-        TERRAIN(/*terrainData*/ bob_seg7_collision_level),
+        TERRAIN(/*terrainData*/ bobo_collision),
         MACRO_OBJECTS(/*objList*/ bob_seg7_macro_objs),
         SHOW_DIALOG(/*index*/ 0x00, DIALOG_000),
         SET_BACKGROUND_MUSIC(/*settingsPreset*/ 0x0000, /*seq*/ SEQ_LEVEL_GRASS),
