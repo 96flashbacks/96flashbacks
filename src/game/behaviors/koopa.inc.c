@@ -473,7 +473,6 @@ s32 obj_begin_race(s32 noTimer) {
         cur_obj_play_sound_2(SOUND_GENERAL_RACE_GUN_SHOT);
 
         if (!noTimer) {
-            // play_music(SEQ_PLAYER_LEVEL, SEQUENCE_ARGS(4, SEQ_LEVEL_SLIDE), 0);
 
             level_control_timer(TIMER_CONTROL_SHOW);
             level_control_timer(TIMER_CONTROL_START);
@@ -595,13 +594,10 @@ static void koopa_the_quick_act_race(void) {
     s32 bowlingBallStatus;
 
     if (obj_begin_race(FALSE)) {
-        // Hitbox is slightly larger while racing
-        // cur_obj_push_mario_away_from_cylinder(180.0f, 300.0f);
-
         if (cur_obj_follow_path(0) == PATH_REACHED_END) {
             o->oAction = KOOPA_THE_QUICK_ACT_DECELERATE;
         } else {
-            downhillSteepness = 1.0f + sins((s16) (f32) o->oPathedTargetPitch);
+            downhillSteepness = 1.0f;
             cur_obj_rotate_yaw_toward(o->oPathedTargetYaw, (s32) (o->oKoopaAgility * 150.0f));
 
             switch (o->oSubAction) {
