@@ -45,6 +45,7 @@ static const LevelScript script_func_local_2[] = {
 
 static const LevelScript script_func_local_3[] = {
     OBJECT_WITH_ACTS(/*model*/ MODEL_KING_BOBOMB,           /*pos*/  1636, 4242, -5567, /*angle*/ 0, -147, 0, /*behParam*/ 0x00000000, /*beh*/ bhvKingBobomb,            /*acts*/ ACT_1),
+    OBJECT_WITH_ACTS(/*model*/ MODEL_STAR,                  /*pos*/ 1161,  4414,  -101, /*angle*/ 0, 0, 0,    /*behParam*/ 0x01000000, /*beh*/ bhvStar,                  /*acts*/ ALL_ACTS),
     OBJECT_WITH_ACTS(/*model*/ MODEL_KOOPA_WITH_SHELL,      /*pos*/ -3000,  121,  5300, /*angle*/ 0, 0, 0,    /*behParam*/ 0x02020000, /*beh*/ bhvKoopa,                 /*acts*/ ACT_3),
     OBJECT_WITH_ACTS(/*model*/ MODEL_NONE,                  /*pos*/  -600, 4400,   600, /*angle*/ 0, 0, 0,    /*behParam*/ 0x03040000, /*beh*/ bhvHiddenStar,            /*acts*/ ALL_ACTS), 
     OBJECT_WITH_ACTS(/*model*/ MODEL_STAR,                  /*pos*/  1550, 1200,   300, /*angle*/ 0, 0, 0,    /*behParam*/ 0x04000000, /*beh*/ bhvStar,                  /*acts*/ ALL_ACTS),

@@ -56,7 +56,6 @@ const MacroObject bob_seg7_macro_objs[] = {
     MACRO_OBJECT(/*preset*/ macro_yellow_coin,               /*yaw*/   0, /*pos*/  -3379,  4664,  -51),
     MACRO_OBJECT(/*preset*/ macro_yellow_coin,               /*yaw*/   0, /*pos*/  -2379,  4664,  -51),
     MACRO_OBJECT(/*preset*/ macro_yellow_coin,               /*yaw*/   0, /*pos*/   -1379,  4664,  -51),
-    MACRO_OBJECT(/*preset*/ macro_box_star_2,                /*yaw*/   0, /*pos*/  1161,  4414,  -101),
     MACRO_OBJECT_WITH_BEH_PARAM(/*preset*/ macro_wooden_signpost,           /*yaw*/   0, /*pos*/  -985,  4074,   544, /*behParam*/ DIALOG_064),
     MACRO_OBJECT_END(),
 };
