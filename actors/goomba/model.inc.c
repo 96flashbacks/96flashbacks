@@ -233,7 +233,7 @@ const Gfx goomba_seg8_dl_0801B560[] = {
     gsSPEndDisplayList(),
 };
 
-// 0x0801B5A0 - 0x0801B5C8
+// 0x0801B5A0 - 0x0801B5C8 -- main head display list
 const Gfx goomba_seg8_dl_0801B5A0[] = {
     gsSPDisplayList(goomba_seg8_dl_0801B2E8),
     gsSPTexture(0xFFFF, 0xFFFF, 0, G_TX_RENDERTILE, G_OFF),
@@ -828,7 +828,7 @@ const Gfx goomba_seg8_dl_0801CF78[] = {
     gsSPEndDisplayList(),
 };
 
-// 0x0801D0D0 - 0x0801D360
+// 0x0801D0D0 - 0x0801D360 -- unused head model
 const Gfx goomba_seg8_dl_0801D0D0[] = {
     gsSPLight(&goomba_seg8_lights_08019500.l, 1),
     gsSPLight(&goomba_seg8_lights_08019500.a, 2),
@@ -880,7 +880,7 @@ const Gfx goomba_seg8_dl_0801D0D0[] = {
     gsSPEndDisplayList(),
 };
 
-// 0x0801D360 - 0x0801D760
+// 0x0801D360 - 0x0801D760 -- unused body model
 const Gfx goomba_seg8_dl_0801D360[] = {
     gsSPLight(&goomba_seg8_lights_08019518.l, 1),
     gsSPLight(&goomba_seg8_lights_08019518.a, 2),
