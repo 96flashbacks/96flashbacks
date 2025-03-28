@@ -1,9 +1,7 @@
-// Lights
 Lights1 wooden_signpost_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
 
-// Textures
 ALIGNED8 static const u8 wooden_signpost_seg3_texture_0302C9C8[] = {
 #include "actors/wooden_signpost/wooden_signpost_back.rgba16.inc.c"
 };
@@ -12,7 +10,6 @@ ALIGNED8 static const u8 wooden_signpost_seg3_texture_0302D1C8[] = {
 #include "actors/wooden_signpost/wooden_signpost_front.rgba16.inc.c"
 };
 
-// Materials
 Gfx mat_wooden_back[] = {
 	gsSPSetLights1(wooden_signpost_lights),
 	gsDPPipeSync(),
@@ -39,7 +36,6 @@ Gfx mat_wooden_front[] = {
 	gsSPEndDisplayList(),
 };
 
-// Vtx Data
 Vtx wooden_signpost_mesh_vtx_0[15] = {
 	{{ {-23, 490, 34}, 0, {922, 162}, {158, 56, 58, 255} }},
 	{{ {-23, -39, -6}, 0, {20, 162}, {147, 252, 191, 255} }},

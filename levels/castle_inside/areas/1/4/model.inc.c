@@ -19,7 +19,7 @@ Lights1 castle_inside_upper_wall_dark_lights = gdSPDefLights1(
 	0x4C, 0x4C, 0x4C,
 	0xCC, 0xCC, 0xCC, 0x28, 0x28, 0x28);
 
-// Material -- TO-DO: use the vanilla game's single material with multiple different lights to optimise the living crap out of this
+// TO-DO: use the vanilla game's single material with multiple different lights to optimise the living crap out of this
 Gfx mat_castle_inside_ceiling_darker[] = {
 	gsSPSetLights1(castle_inside_ceiling_lights),
 	gsDPPipeSync(),
@@ -124,7 +124,6 @@ Gfx mat_castle_inside_upper_wall_dark[] = {
 	gsSPEndDisplayList(),
 };
 
-// Vtx Data
 Vtx castle_inside_4_dl_mesh_vtx_0[63] = {
 	{{ {-869, 768, -1023}, 0, {4364, 478}, {0, 0, 127, 255} }},
 	{{ {-869, 512, -1023}, 0, {4364, 990}, {0, 0, 127, 255} }},
