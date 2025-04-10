@@ -9,12 +9,12 @@ static const Vtx coin_seg3_vertex_030056C0[] = {
     {{{   -32,     64,      0}, 0, {     0,      0}, {0xff, 0xff, 0x00, 0xff}}},
 };
 
-// 0x03005700
+// 0x03005700 -- blue coin
 static const Vtx coin_seg3_vertex_03005700[] = {
-    {{{   -50,      0,      0}, 0, {     0,   1984}, {0x78, 0x78, 0xff, 0xff}}},
-    {{{    50,      0,      0}, 0, {  1984,   1984}, {0x78, 0x78, 0xff, 0xff}}},
-    {{{    50,    100,      0}, 0, {  1984,      0}, {0x78, 0x78, 0xff, 0xff}}},
-    {{{   -50,    100,      0}, 0, {     0,      0}, {0x78, 0x78, 0xff, 0xff}}},
+    {{{   -32,      0,      0}, 0, {     0,   1984}, {0xff, 0xff, 0x00, 0xff}}},
+    {{{    32,      0,      0}, 0, {  1984,   1984}, {0xff, 0xff, 0x00, 0xff}}},
+    {{{    32,     64,      0}, 0, {  1984,      0}, {0xff, 0xff, 0x00, 0xff}}},
+    {{{   -32,     64,      0}, 0, {     0,      0}, {0xff, 0xff, 0x00, 0xff}}},
 };
 
 // 0x03005740
@@ -104,7 +104,7 @@ const Gfx coin_seg3_dl_03007878[] = {
     gsSPBranchList(coin_seg3_dl_030077D0),
 };
 
-// 0x030078A0 - 0x030078C8
+// 0x030078A0 - 0x030078C8 -- blue coin start
 const Gfx coin_seg3_dl_030078A0[] = {
     gsDPPipeSync(),
     gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_16b, 1, coin_seg3_texture_03005780),
@@ -131,7 +131,7 @@ const Gfx coin_seg3_dl_030078F0[] = {
     gsSPBranchList(coin_seg3_dl_030077D0),
 };
 
-// 0x03007918 - 0x03007940
+// 0x03007918 - 0x03007940 -- blue coin end
 const Gfx coin_seg3_dl_03007918[] = {
     gsDPPipeSync(),
     gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_16b, 1, coin_seg3_texture_03006F80),
