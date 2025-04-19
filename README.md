@@ -16,6 +16,14 @@ If there are any questions regarding this project, we invite you to join our [Di
 
 *1up Guy*
 
+#### Models
+
+*stalechilibeans*
+
+*Scraps*
+
+*`K-Dubs΄*
+
 #### Textures
 
 *1up Guy*
@@ -37,6 +45,8 @@ If there are any questions regarding this project, we invite you to join our [Di
 *1up Guy*
 
 *`K-Dubs΄*
+
+*Sleekflash-16*
 
 #### Special Thanks To
 
