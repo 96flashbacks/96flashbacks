@@ -36,7 +36,7 @@ DEFINE_LEVEL("MAIN MAP",       LEVEL_CASTLE_GROUNDS,   COURSE_NONE,     castle_g
 DEFINE_LEVEL("EXT1 YOKO SCRL", LEVEL_BITDW,            COURSE_BITDW,    bitdw,            sky,      16000,    0x00, 0x00, 0x00, _,         _)
 DEFINE_LEVEL("EXT7 HORI MINI", LEVEL_VCUTM,            COURSE_VCUTM,    vcutm,            outside,  30000,    0x00, 0x00, 0x00, _,         _)
 DEFINE_LEVEL("EXT2 TIKA LAVA", LEVEL_BITFS,            COURSE_BITFS,    bitfs,            sky,      16000,    0x00, 0x00, 0x00, _,         _)
-DEFINE_LEVEL("EXT9 SUISOU",    LEVEL_SA,               COURSE_NONE,     sa,               inside,   20000,    0x00, 0x00, 0x00, _,         _)
+DEFINE_LEVEL("EXT9 SUISOU",    LEVEL_SA,               COURSE_SA,       sa,               inside,   20000,    0x00, 0x00, 0x00, _,         _)
 DEFINE_LEVEL("EXT3 HEAVEN",    LEVEL_BITS,             COURSE_BITS,     bits,             sky,      16000,    0x00, 0x00, 0x00, _,         _)
 DEFINE_LEVEL("FIREB1 % INVLC", LEVEL_LLL,              COURSE_LLL,      lll,              fire,     22000,    0x00, 0x00, 0x00, _,         _)
 DEFINE_LEVEL("WATER LAND",     LEVEL_DDD,              COURSE_DDD,      ddd,              water,    17000,    0x00, 0x00, 0x00, sDynDdd,   _)
