@@ -21,10 +21,10 @@ static const LevelScript script_func_local_1[] = {
     RETURN(),
 };
 
-//static const LevelScript script_func_local_2[] = {
-    //OBJECT(/*model*/ MODEL_NONE, /*pos*/ 0, -4250, 0, /*angle*/ 0, 0, 0, /*behParam*/ 0x00000000, /*beh*/ bhvHiddenRedCoinStar),
-    //RETURN(),
-//};
+static const LevelScript script_func_local_2[] = {
+    OBJECT(/*model*/ MODEL_NONE, /*pos*/ 0, -4250, 0, /*angle*/ 0, 0, 0, /*behParam*/ 0x00000000, /*beh*/ bhvHiddenRedCoinStar),
+    RETURN(),
+};
 
 const LevelScript level_sa_entry[] = {
     INIT_LEVEL(),
@@ -47,7 +47,7 @@ const LevelScript level_sa_entry[] = {
         WARP_NODE(/*id*/ 0xF0, /*destLevel*/ LEVEL_CASTLE, /*destArea*/ 0x01, /*destNode*/ 0x27, /*flags*/ WARP_NO_CHECKPOINT),
         WARP_NODE(/*id*/ 0xF1, /*destLevel*/ LEVEL_CASTLE, /*destArea*/ 0x01, /*destNode*/ 0x28, /*flags*/ WARP_NO_CHECKPOINT),
         JUMP_LINK(script_func_local_1),
-        //JUMP_LINK(script_func_local_2),
+        JUMP_LINK(script_func_local_2),
         TERRAIN(/*terrainData*/ sa_seg7_collision),
         MACRO_OBJECTS(/*objList*/ sa_seg7_macro_objs),
         SET_BACKGROUND_MUSIC(/*settingsPreset*/ 0x0003, /*seq*/ (SEQ_LEVEL_WATER | SEQ_VARIATION)),

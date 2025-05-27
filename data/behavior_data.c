@@ -4631,7 +4631,6 @@ const BehaviorScript bhvRedCoin[] = {
     BILLBOARD(),
     SET_INT(oIntangibleTimer, 0),
     SET_INT(oAnimState, -1),
-    SET_FLOAT(oDrawingDistance, 1000),
     CALL_NATIVE(bhv_init_room),
     CALL_NATIVE(bhv_red_coin_init),
     BEGIN_LOOP(),

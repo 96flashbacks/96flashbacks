@@ -25,10 +25,10 @@ static const LevelScript script_func_local_1[] = {
     RETURN(),
 };
 
-//static const LevelScript script_func_local_2[] = {
-    //OBJECT(/*model*/ MODEL_NONE, /*pos*/ -160, 1950, -470, /*angle*/ 0, 0, 0, /*behParam*/ 0x00000000, /*beh*/ bhvHiddenRedCoinStar),
-    //RETURN(),
-//};
+static const LevelScript script_func_local_2[] = {
+    OBJECT(/*model*/ MODEL_NONE, /*pos*/ -160, 1950, -470, /*angle*/ 0, 0, 0, /*behParam*/ 0x00000000, /*beh*/ bhvHiddenRedCoinStar),
+    RETURN(),
+};
 
 const LevelScript level_wmotr_entry[] = {
     INIT_LEVEL(),
@@ -54,7 +54,7 @@ const LevelScript level_wmotr_entry[] = {
         WARP_NODE(/*id*/ 0xF1, /*destLevel*/ LEVEL_CASTLE, /*destArea*/ 0x02, /*destNode*/ 0x6D, /*flags*/ WARP_NO_CHECKPOINT),
         WARP_NODE(/*id*/ 0xF3, /*destLevel*/ LEVEL_CASTLE_GROUNDS, /*destArea*/ 0x01, /*destNode*/ 0x0A, /*flags*/ WARP_NO_CHECKPOINT),
         JUMP_LINK(script_func_local_1),
-        //JUMP_LINK(script_func_local_2),
+        JUMP_LINK(script_func_local_2),
         TERRAIN(/*terrainData*/ wmotr_seg7_collision),
         MACRO_OBJECTS(/*objList*/ wmotr_seg7_macro_objs),
         SET_BACKGROUND_MUSIC(/*settingsPreset*/ 0x0000, /*seq*/ SEQ_LEVEL_SLIDE),

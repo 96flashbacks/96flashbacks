@@ -1,4 +1,3 @@
-// Lights
 Lights1 castle_inside_lights = gdSPDefLights1(
 	0x5F, 0x5F, 0x5F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
@@ -7,7 +6,6 @@ Lights1 castle_inside_carpet_lights = gdSPDefLights1(
 	0x52, 0x52, 0x52,
 	0xDD, 0xDD, 0xDD, 0x28, 0x28, 0x28);
 
-// Materials
 Gfx mat_castle_inside_floor[] = {
 	gsSPClearGeometryMode(G_SHADING_SMOOTH),
 	gsSPSetLights1(castle_inside_lights),
@@ -128,7 +126,6 @@ Gfx mat_revert_castle_inside_step_wall[] = {
 	gsSPEndDisplayList(),
 };
 
-// Vtx Data
 Vtx castle_inside_2_dl_mesh_vtx_0[118] = {
 	{{ {-255, 512, -767}, 0, {5844, -798}, {232, 122, 24, 255} }},
 	{{ {-255, 614, -1279}, 0, {5844, -3354}, {232, 122, 24, 255} }},

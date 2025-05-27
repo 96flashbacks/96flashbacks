@@ -38,11 +38,6 @@ static const LevelScript script_func_local_2[] = {
     RETURN(),
 };
 
-//static const LevelScript script_func_local_3[] = {
-//    OBJECT(/*model*/ MODEL_MARIO, /*pos*/  7180,  3000,    0, /*angle*/ 0, 0, 0, /*behParam*/ 0x00000000, /*beh*/ bhvStar),
-//    RETURN(),
-//};
-
 const LevelScript level_bitdw_entry[] = {
     INIT_LEVEL(),
     LOAD_MIO0(        /*seg*/ 0x07, _bitdw_segment_7SegmentRomStart, _bitdw_segment_7SegmentRomEnd),

@@ -47,7 +47,7 @@ DEFINE_LEVEL("EXT4 MINI SLID", LEVEL_PSS,              COURSE_PSS,      pss,    
 DEFINE_LEVEL("IN THE FALL",    LEVEL_COTMC,            COURSE_COTMC,    cotmc,            cave,     18000,    0x00, 0x00, 0x00, _,         _)
 DEFINE_LEVEL("EXT6 MARIO FLY", LEVEL_TOTWC,            COURSE_TOTWC,    totwc,            sky,      20000,    0x00, 0x00, 0x00, _,         _)
 DEFINE_LEVEL("KUPPA1",         LEVEL_BOWSER_1,         COURSE_BITDW,    bowser_1,         generic,  VAL_DIFF, 0x00, 0x00, 0x00, _,         _)
-DEFINE_LEVEL("EXT8 BLUE SKY",  LEVEL_WMOTR,            COURSE_WMOTR,    wmotr,            generic,  20000,    0x00, 0x00, 0x00, _,         _)
+DEFINE_LEVEL("EXT8 BLUE SKY",  LEVEL_WMOTR,            COURSE_NONE,     wmotr,            generic,  20000,    0x00, 0x00, 0x00, _,         _)
 DEFINE_LEVEL("YAJIMA TEST",    LEVEL_YAJIMA_TEST,      COURSE_NONE,     yajima_test,      generic,  15000,    0x00, 0x00, 0x00, _,         _)
 DEFINE_LEVEL("KUPPA2",         LEVEL_BOWSER_2,         COURSE_BITFS,    bowser_2,         fire,     VAL_DIFF, 0x00, 0x00, 0x00, _,         _)
 DEFINE_LEVEL("KUPPA3",         LEVEL_BOWSER_3,         COURSE_BITS,     bowser_3,         generic,  VAL_DIFF, 0x00, 0x00, 0x00, _,         _)

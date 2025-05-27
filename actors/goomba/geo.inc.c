@@ -16,7 +16,7 @@ const GeoLayout goomba_geo[] = {
             GEO_OPEN_NODE(),
                GEO_SWITCH_CASE(2, geo_switch_anim_state),
                GEO_OPEN_NODE(),
-                  GEO_ANIMATED_PART(LAYER_OPAQUE, 48, 0, 0, goomba_seg8_dl_0801B5C8),
+                  GEO_ANIMATED_PART(LAYER_OPAQUE, 48, 0, 0, goomba_seg8_dl_0801B5C8), //goomba_seg8_dl_0801D0D0 is the unused head
                   GEO_ANIMATED_PART(LAYER_OPAQUE, 48, 0, 0, goomba_seg8_dl_0801B5F0),
                GEO_CLOSE_NODE(),
                GEO_ANIMATED_PART(LAYER_OPAQUE, -60, -16, 45, NULL),

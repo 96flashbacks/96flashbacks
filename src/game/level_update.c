@@ -430,7 +430,7 @@ void init_mario_after_warp(void) {
     }
 
     if (gCurrDemoInput == NULL) {
-        set_background_music(gCurrentArea->musicParam, gCurrentArea->musicParam2, 0);
+        set_background_music(gCurrentArea->musicParam2, 0);
 
         if (gMarioState->flags & MARIO_METAL_CAP) {
             play_cap_music(SEQUENCE_ARGS(4, SEQ_EVENT_METAL_CAP));
@@ -697,7 +697,6 @@ s16 level_trigger_warp(struct MarioState *m, s32 warpOp) {
                 sDelayedWarpTimer = 48;
                 sSourceWarpNodeId = WARP_NODE_DEATH;
                 play_transition(WARP_TRANSITION_FADE_INTO_BOWSER, 0x30, 0x00, 0x00, 0x00);
-                play_sound(SOUND_MENU_BOWSER_LAUGH, gDefaultSoundArgs);
                 break;
 
             case WARP_OP_WARP_FLOOR:
@@ -1157,8 +1156,10 @@ s32 init_level(void) {
                 if (gMarioState->action != ACT_UNINITIALIZED) {
                     if (save_file_exists(gCurrSaveFileNum - 1)) {
                         set_mario_action(gMarioState, ACT_IDLE, 0);
+#ifdef INTRO
                     } else {
                         set_mario_action(gMarioState, ACT_INTRO_CUTSCENE, 0);
+#endif
                     }
                 }
             }
@@ -1167,7 +1168,7 @@ s32 init_level(void) {
         play_transition(WARP_TRANSITION_FADE_FROM_STAR, 0x10, 0xFF, 0xFF, 0xFF);
 
         if (gCurrDemoInput == NULL) {
-            set_background_music(gCurrentArea->musicParam, gCurrentArea->musicParam2, 0);
+            set_background_music(gCurrentArea->musicParam2, 0);
         }
     }
 #ifdef VERSION_SH

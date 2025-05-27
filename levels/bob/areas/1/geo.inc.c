@@ -15,10 +15,11 @@ const GeoLayout bob_geo_000488[] = {
          GEO_OPEN_NODE(),
             GEO_CAMERA(1, 0, 2000, 6000, 3072, 0, -4608, geo_camera_main),
             GEO_OPEN_NODE(),
-               GEO_DISPLAY_LIST(LAYER_OPAQUE, bob_seg7_dl_07004390), //main level
-               GEO_DISPLAY_LIST(LAYER_OPAQUE, bob_seg7_dl_07009D80), //spike
-               GEO_DISPLAY_LIST(LAYER_TRANSPARENT_DECAL, bob_seg7_dl_0700A470), //shadows
-               GEO_DISPLAY_LIST(LAYER_ALPHA, bob_seg7_dl_0700A920), //fences
+               GEO_DISPLAY_LIST(LAYER_OPAQUE, bobo_1_dl_mesh), //main level
+               GEO_DISPLAY_LIST(LAYER_OPAQUE, bobo_2_dl_mesh), //spike
+               GEO_DISPLAY_LIST(LAYER_OPAQUE, bobo_3_dl_mesh), //spike
+               GEO_DISPLAY_LIST(LAYER_TRANSPARENT_DECAL, bobo_4_dl_mesh), //shadows
+               GEO_DISPLAY_LIST(LAYER_ALPHA, bobo_5_dl_mesh), //fences
                GEO_RENDER_OBJ(),
                GEO_ASM(0, geo_envfx_main),
             GEO_CLOSE_NODE(),

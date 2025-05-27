@@ -8110,8 +8110,8 @@ BAD_RETURN(s32) cutscene_bowser_arena_set_focus(struct Camera *c) {
  */
 BAD_RETURN(s32) cutscene_bowser_arena_adjust_offsets(UNUSED struct Camera *c) {
     approach_s16_asymptotic_bool(&sCutsceneVars[3].angle[0], 0x6C8, 30);
-    approach_f32_asymptotic_bool(&sCutsceneVars[0].point[2], -180.f, 0.02f);
-    // approach_f32_asymptotic_bool(&sCutsceneVars[3].point[2], 550.f, 0.02f);
+    approach_f32_asymptotic_bool(&sCutsceneVars[0].point[2], -200.f, 0.02f);
+    approach_f32_asymptotic_bool(&sCutsceneVars[3].point[2], 550.f, 0.02f);
 }
 
 /**
@@ -8119,13 +8119,6 @@ BAD_RETURN(s32) cutscene_bowser_arena_adjust_offsets(UNUSED struct Camera *c) {
  */
 BAD_RETURN(s32) cutscene_bowser_arena_pan_left(UNUSED struct Camera *c) {
     approach_f32_asymptotic_bool(&sCutsceneVars[0].point[2], 0.f, 0.05f);
-}
-
-/**
- * Duplicate of cutscene_mario_dialog().
- */
-BAD_RETURN(s32) cutscene_bowser_arena_mario_dialog(UNUSED struct Camera *c) {
-    cutscene_common_set_dialog_state(1);
 }
 
 void cutscene_stop_dialog(UNUSED struct Camera *c) {
@@ -8208,7 +8201,6 @@ BAD_RETURN(s32) cutscene_bowser_arena(struct Camera *c) {
     cutscene_spawn_obj(2, 0);
 
     if (gSecondCameraFocus != NULL) {
-        cutscene_event(cutscene_bowser_arena_mario_dialog, c, 0, -1);
         cutscene_event(cutscene_bowser_arena_start, c, 0, 5);
         cutscene_event(cutscene_bowser_area_start_bowser_walking, c, 40, 40);
         cutscene_event(cutscene_bowser_area_shake_fov, c, 145, 145);

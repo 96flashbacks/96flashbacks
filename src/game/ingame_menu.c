@@ -1572,8 +1572,6 @@ void handle_special_dialog_text(s16 dialogID) { // dialog ID tables, in order
     // King Bob-omb (Start), Whomp (Start), King Bob-omb (throw him out), Eyerock (Start), Wiggler
     // (Start)
     s16 dialogBossStart[] = { 17, 114, 128, 117, 150 };
-    // Koopa the Quick (BOB), Koopa the Quick (THI), Penguin Race, Fat Penguin Race (120 stars)
-    s16 dialogRaceSound[] = { 5, 9, 55, 164 };
     // Red Switch, Green Switch, Blue Switch, 100 coins star, Bowser Red Coin Star
     s16 dialogStarSound[] = { 10, 11, 12, 13, 14 };
     // King Bob-omb (Start), Whomp (Defeated), King Bob-omb (Defeated, missing in JP), Eyerock
@@ -1589,13 +1587,6 @@ void handle_special_dialog_text(s16 dialogID) { // dialog ID tables, in order
 
     for (i = 0; i < (s16) ARRAY_COUNT(dialogBossStart); i++) {
         if (dialogBossStart[i] == dialogID) {
-            return;
-        }
-    }
-
-    for (i = 0; i < (s16) ARRAY_COUNT(dialogRaceSound); i++) {
-        if (dialogRaceSound[i] == dialogID && gDialogLineNum == 1) {
-            play_race_fanfare();
             return;
         }
     }

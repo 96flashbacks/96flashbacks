@@ -120,12 +120,12 @@ STATIC_ASSERT(ARRAY_COUNT(sDialogSpeaker) == DIALOG_COUNT,
 s32 sDialogSpeakerVoice[] = {
     SOUND_OBJ_UKIKI_CHATTER_LONG,
     SOUND_OBJ_BIG_PENGUIN_YELL,
-    SOUND_OBJ_BOWSER_INTRO_LAUGH,
+    NO_SOUND,
     SOUND_OBJ_KOOPA_TALK,
     SOUND_OBJ_KING_BOBOMB_TALK,
     SOUND_OBJ_BOO_LAUGH_LONG,
     SOUND_OBJ_BOBOMB_BUDDY_TALK,
-    SOUND_OBJ_BOWSER_LAUGH,
+    NO_SOUND,
     SOUND_OBJ2_BOSS_DIALOG_GRUNT,
     SOUND_OBJ_WIGGLER_TALK,
     SOUND_GENERAL_YOSHI_TALK,
@@ -2286,16 +2286,6 @@ void play_power_star_jingle(u8 arg0) {
     if (!arg0) {
         D_80363812 = 0;
     }
-    // play_sequence(SEQ_PLAYER_ENV, SEQ_EVENT_CUTSCENE_STAR_SPAWN, 0);
-    D_8033211C = 0x80 | 20;
-#ifdef VERSION_EU
-    D_EU_80300558 = 2;
-#endif
-    func_803200E4(50);
-}
-
-void play_race_fanfare(void) {
-    play_sequence(SEQ_PLAYER_ENV, SEQ_EVENT_RACE, 0);
     D_8033211C = 0x80 | 20;
 #ifdef VERSION_EU
     D_EU_80300558 = 2;
@@ -2315,7 +2305,7 @@ void play_toads_jingle(void) {
 /**
  * Called from threads: thread5_game_loop
  */
-void sound_reset(u8 presetId) {
+void sound_reset(void) {
     u8 i;
 
     sound_init();

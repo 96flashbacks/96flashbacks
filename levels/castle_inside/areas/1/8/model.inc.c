@@ -1,4 +1,3 @@
-// Materials
 Gfx mat_castle_inside_hallway_ceiling[] = {
 	gsSPClearGeometryMode(G_SHADING_SMOOTH),
 	gsSPSetLights1(castle_inside_lights),
@@ -39,7 +38,6 @@ Gfx mat_revert_castle_inside_hallway_wall[] = {
 	gsSPEndDisplayList(),
 };
 
-// Vtx Data
 Vtx castle_inside_8_dl_mesh_vtx_0[152] = {
 	{{ {-716, -383, -639}, 0, {2888, 3032}, {0, 0, 127, 255} }},
 	{{ {-1330, -409, -639}, 0, {2746, -3098}, {0, 0, 127, 255} }},

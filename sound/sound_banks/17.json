@@ -93,7 +93,7 @@
         "inst4": {
             "release_rate": 10,
             "envelope": "envelope4",
-            "sound": "26"
+            "sound": "42"
         },
         "percussion": [
             {"release_rate": 10, "pan": 62, "envelope": "envelope5", "sound": {"sample": "06", "tuning": 0.210224}},

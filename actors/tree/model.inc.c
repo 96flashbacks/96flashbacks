@@ -16,7 +16,7 @@ ALIGNED8 static const u8 tree_seg3_texture_0302EE28[] = {
 #include "actors/tree/tree_right_side.rgba16.inc.c"
 };
 
-// old tree
+// 0x0302FE28 - 0x0302FE58
 static Vtx vtx_main_tree[] = {
 	{   -356,      0,      0,     0,  -200,  2012,     0,    0,  127,  255}, 
 	{      0,      0,      0,     0,   990,  2012,     0,    0,  127,  255}, 

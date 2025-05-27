@@ -114,12 +114,12 @@ void spawn_red_coin_cutscene_star(f32 sp20, f32 sp24, f32 sp28) {
     sp1C->oBehParams2ndByte = 1;
 }
 
-//void spawn_no_exit_star(f32 sp20, f32 sp24, f32 sp28) {
-    // struct Object *sp1C;
-    // sp1C = spawn_star(sp1C, sp20, sp24, sp28);
-    // sp1C->oBehParams2ndByte = 1;
-    // sp1C->oInteractionSubtype |= INT_SUBTYPE_NO_EXIT;
-//}
+void spawn_no_exit_star(f32 sp20, f32 sp24, f32 sp28) {
+     struct Object *sp1C;
+     sp1C = spawn_star(sp1C, sp20, sp24, sp28);
+     sp1C->oBehParams2ndByte = 1;
+     sp1C->oInteractionSubtype |= INT_SUBTYPE_NO_EXIT;
+}
 
 void bhv_hidden_red_coin_star_init(void) {
     s16 sp36;
@@ -149,7 +149,7 @@ void bhv_hidden_red_coin_star_loop(void) {
 
         case 1:
             if (o->oTimer > 2) {
-                // spawn_red_coin_cutscene_star(o->oPosX, o->oPosY, o->oPosZ);
+                spawn_red_coin_cutscene_star(o->oPosX, o->oPosY, o->oPosZ);
                 spawn_mist_particles();
                 o->activeFlags = ACTIVE_FLAG_DEACTIVATED;
             }
