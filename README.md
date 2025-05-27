@@ -8,74 +8,32 @@ If there are any questions regarding this project, we invite you to join our [Di
 
 ## Credits
 
-### '96flashbacks' Team
+### Programming
+- stalechilibeans
+- 1up Guy
 
-#### Programming
+### Assets
+- stalechilibeans
+- Scraps
+- `K-Dubs΄
+- 1up Guy
+- Sleekflash-16
 
-*stalechilibeans*
+### Research & Playtesting
+- Scraps
+- `K-Dubs΄
+- Sleekflash-16
 
-*1up Guy*
+### Contributions
+- SuperGarlic64
+- elinspectorardilla
+- TheRealDustinWijaya2006
+- brancolox
 
-#### Models
-
-*stalechilibeans*
-
-*Scraps*
-
-*`K-Dubs΄*
-
-#### Textures
-
-*1up Guy*
-
-*`K-Dubs΄*
-
-#### Models
-
-*Scraps*
-
-*`K-Dubs΄*
-
-*stalechilibeans*
-
-#### Audio
-
-*`K-Dubs΄*
-
-*Sleekflash-16*
-
-#### Research & Playtesting
-
-*Scraps*
-
-*stalechilibeans*
-
-*1up Guy*
-
-*`K-Dubs΄*
-
-*Sleekflash-16*
-
-#### Special Thanks To
-
-*iProgramInCpp*
-
-*brancolox*
-
-*godly*
-
-*dualsh0x*
-
-*Guestpiki*
-
-*lilmtit*
-
-*xerox*
-
-*SuperGarlic64*
-
-*elinspectorardilla*
-
-*TheRealDustinWijaya2006*
-
-### Original Super Mario 64 Decompilation Team
+### Special Thanks
+- iProgramInCpp
+- godly
+- dualsh0x
+- Guestpiki
+- lilmtit
+- xerox
