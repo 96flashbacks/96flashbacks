@@ -1,6 +1,7 @@
 # 96flashbacks
+![transparentplacehlder](https://github.com/user-attachments/assets/2a48a88f-40a7-4477-ab83-b2d10caf8080)
 
-This repo contains a modified decompilation of Super Mario 64 which aims to interpret a late development build of the game.
+'96flashbacks' is an interpretation of the late beta (February/early March) stages of Super Mario 64's development, made using the [SM64 Decomp](https://github.com/n64decomp/sm64) as a base.
 
 If there are any questions regarding this project, we invite you to join our [Discord Server.](https://discord.gg/rjWEDCqW4c)
 
@@ -22,7 +23,7 @@ If there are any questions regarding this project, we invite you to join our [Di
 - `K-Dubs΄
 - Sleekflash-16
 
-### Contributions
+### Contributors
 - SuperGarlic64
 - elinspectorardilla
 - TheRealDustinWijaya2006
@@ -31,7 +32,13 @@ If there are any questions regarding this project, we invite you to join our [Di
 ### Special Thanks
 - iProgramInCpp
 - godly
-- dualsh0x
+- duskewl
 - Guestpiki
 - lilmtit
 - xerox
+
+### Tools & Resources
+- [Fast64](https://github.com/Fast-64/fast64)
+- [SM64 Decomp](https://github.com/n64decomp/sm64)
+- [64history's archives](https://archive.org/details/sm64-beta-content)
+- [Dudaw's archives](https://archive.org/details/sm64brp_src_abandoned)
