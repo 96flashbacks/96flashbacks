@@ -9152,9 +9152,8 @@ BAD_RETURN(s32) cutscene_non_painting_set_cam_pos(struct Camera *c) {
             break;
 
         default:
-            offset_rotated(c->pos, sCutsceneVars[7].point, sCutsceneVars[5].point,
-                           sCutsceneVars[7].angle);
-            c->pos[1] = find_floor(c->pos[0], c->pos[1] + 1000.f, c->pos[2], &floor) + 125.f;
+            offset_rotated(c->pos, sCutsceneVars[7].point, sCutsceneVars[5].point, sCutsceneVars[7].angle);
+            c->pos[1] = find_floor(c->pos[0], c->pos[1] + 1000.f, c->pos[2], &floor) + 32.f;
             break;
     }
 }
@@ -9171,7 +9170,8 @@ BAD_RETURN(s32) cutscene_non_painting_set_cam_focus(struct Camera *c) {
         c->focus[1] = c->pos[1] + (sMarioCamState->pos[1] - c->pos[1]) * 0.4f;
         c->focus[2] = c->pos[2] + (sMarioCamState->pos[2] - c->pos[2]) * 0.7f;
     } else {
-        c->focus[1] = c->pos[1] + (sMarioCamState->pos[1] - c->pos[1]) * 0.2f;
+        c->focus[1] = (c->pos[1] + (sMarioCamState->pos[1] - c->pos[1]) * 0.1f) + 96.f;
+        // beta had the focus slightly higher than mario, possibly to have less carpet visible?
     }
 }
 
@@ -9210,6 +9210,12 @@ BAD_RETURN(s32) cutscene_exit_bowser_succ(struct Camera *c) {
     cutscene_event(cutscene_non_painting_set_cam_focus, c, 0, -1);
     cutscene_event(cutscene_exit_bowser_key_toss_shake, c, 125, 125);
     cutscene_event(cutscene_exit_succ_shake_landing, c, 41, 41);
+
+/*  cutscene_event(cutscene_non_painting_death_start, c, 0, 0);
+    cutscene_event(cutscene_non_painting_death_override_offset, c, 0, 0);
+    cutscene_event(cutscene_non_painting_set_cam_pos, c, 0, -1);
+    cutscene_event(cutscene_non_painting_set_cam_focus, c, 0, -1);
+    sStatusFlags |= CAM_FLAG_UNUSED_CUTSCENE_ACTIVE;*/
 }
 
 /**
@@ -9258,7 +9264,7 @@ BAD_RETURN(s32) cutscene_exit_non_painting_succ(struct Camera *c) {
 BAD_RETURN(s32) cutscene_non_painting_death_start(UNUSED struct Camera *c) {
     vec3f_copy(sCutsceneVars[7].point, sMarioCamState->pos);
     vec3s_copy(sCutsceneVars[7].angle, sMarioCamState->faceAngle);
-    vec3f_set(sCutsceneVars[6].point, -42.f, 350.f, 727.f);
+    vec3f_set(sCutsceneVars[6].point, 0.f, 350.f, 832.f);
     // This is always overwritten, except in the unused cutscene_exit_bowser_death()
     vec3f_set(sCutsceneVars[5].point, 107.f, 226.f, 1187.f);
 }
@@ -9290,7 +9296,7 @@ BAD_RETURN(s32) cutscene_non_painting_death_override_offset(UNUSED struct Camera
             vec3f_set(sCutsceneVars[5].point, 187.f, 369.f, -197.f);
             break;
         default:
-            vec3f_set(sCutsceneVars[5].point, 107.f, 246.f, 1307.f);
+            vec3f_set(sCutsceneVars[5].point, 107.f, 0.f, 1307.f);
             break;
     }
 }
