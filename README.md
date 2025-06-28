@@ -28,6 +28,7 @@ If there are any questions regarding this project, we invite you to join our [Di
 - elinspectorardilla
 - TheRealDustinWijaya2006
 - brancolox
+- ChaoticBuilder
 
 ### Special Thanks
 - iProgramInCpp
