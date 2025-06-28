@@ -41,7 +41,7 @@
 
 // Miscellaneous
 //#define FEBRUARY
-//#define DECEMBER
+#define DECEMBER
 //#define RELCAN
 //#define NINTENDO_LOGO
 //#define INTRO
