@@ -779,18 +779,32 @@ s32 launch_mario_until_land(struct MarioState *m, s32 endAction, s32 animation, 
 }
 
 s32 act_unlocking_key_door(struct MarioState *m) {
-    m->faceAngle[1] = m->usedObj->oMoveAngleYaw;
+    if (m->actionTimer < 135) m->faceAngle[1] = m->usedObj->oMoveAngleYaw;
 
-    m->pos[0] = m->usedObj->oPosX + coss(m->faceAngle[1]) * 75.0f;
-    m->pos[2] = m->usedObj->oPosZ + sins(m->faceAngle[1]) * 75.0f;
+    if (m->actionTimer < 135) {
+        m->pos[0] = m->usedObj->oPosX + coss(m->faceAngle[1]) * 75.0f;
+        m->pos[2] = m->usedObj->oPosZ + sins(m->faceAngle[1]) * 75.0f;
+    }
 
     if (m->actionArg & 2) {
-        m->faceAngle[1] += 0x8000;
+        if (m->actionTimer < 135) m->faceAngle[1] += 0x8000;
     }
 
     if (m->actionTimer == 0) {
         spawn_obj_at_mario_rel_yaw(m, MODEL_BOWSER_KEY_CUTSCENE, bhvBowserKeyUnlockDoor, 0);
         set_mario_animation(m, MARIO_ANIM_UNLOCK_DOOR);
+    }
+    if (m->actionTimer == 135) set_mario_animation(m, MARIO_ANIM_WALKING);
+    if (m->actionTimer > 135) {
+        if (m->actionTimer < 142) {
+            m->faceAngle[1] -= DEGREES(15);
+        } else if (m->actionTimer < 148) {
+            set_mario_anim_with_accel(m, MARIO_ANIM_WALKING, 0x00010000);
+            m->pos[0] += 12.0f * sins(m->faceAngle[1]);
+            m->pos[2] += 12.0f * coss(m->faceAngle[1]);
+        } else if (m->actionTimer <= 154) {
+            m->faceAngle[1] += DEGREES(15);
+        }
     }
 
     switch (m->marioObj->header.gfx.animInfo.animFrame) {
@@ -802,10 +816,10 @@ s32 act_unlocking_key_door(struct MarioState *m) {
             break;
     }
 
-    update_mario_pos_for_anim(m);
+    if (m->actionTimer < 135) update_mario_pos_for_anim(m);
     stop_and_set_height_to_floor(m);
 
-    if (is_anim_at_end(m)) {
+    if (m->actionTimer >= 155) {
         if (m->usedObj->oBehParams >> 24 == 1) {
             save_file_set_flags(SAVE_FLAG_UNLOCKED_UPSTAIRS_DOOR);
             save_file_clear_flags(SAVE_FLAG_HAVE_KEY_2);
