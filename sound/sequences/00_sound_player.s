@@ -5743,8 +5743,6 @@ chan_setlayer 0, .layer_2348
 chan_end
 
 .layer_2348:
-layer_transpose 10
-layer_call .layer_fn_2353
 layer_call .layer_fn_2353
 layer_delay 0x14
 layer_end

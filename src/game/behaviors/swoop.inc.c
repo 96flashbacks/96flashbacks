@@ -42,7 +42,7 @@ static void swoop_act_idle(void) {
  * him. Return to home once mario is far away.
  */
 static void swoop_act_move(void) {
-    cur_obj_init_animation_with_accel_and_sound(0, 2.0f);
+    cur_obj_init_animation_with_accel_and_sound(0, 1.0f);
     if (cur_obj_check_if_near_animation_end()) {
         cur_obj_play_sound_2(SOUND_OBJ_UNKNOWN6);
     }
