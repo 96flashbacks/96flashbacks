@@ -12,7 +12,7 @@ const MacroObject ccm_seg7_area_1_macro_objs[] = {
     MACRO_OBJECT_WITH_BEH_PARAM(/*preset*/ macro_cannon_open,             /*yaw*/   0, /*pos*/  1090, -4607,  5729, /*behParam*/ 0x80),
     MACRO_OBJECT_WITH_BEH_PARAM(/*preset*/ macro_wooden_signpost,           /*yaw*/ 270, /*pos*/ -1060,  2560, -1840, /*behParam*/ DIALOG_087),
     MACRO_OBJECT(/*preset*/ macro_coin_line_vertical,        /*yaw*/   0, /*pos*/  -180,  3100, -1480),
-    MACRO_OBJECT(/*preset*/ macro_yellow_coin,               /*yaw*/  67, /*pos*/ -1931,  1152,  1680),
+    MACRO_OBJECT(/*preset*/ macro_yellow_coin,               /*yaw*/  67, /*pos*/ -1942,  1145,  1678),
     MACRO_OBJECT(/*preset*/ macro_yellow_coin,               /*yaw*/   0, /*pos*/  3560,  1977,  -280), 
     MACRO_OBJECT(/*preset*/ macro_coin_line_horizontal,      /*yaw*/  90, /*pos*/ -1020,   646, -2706),
     MACRO_OBJECT(/*preset*/ macro_coin_line_horizontal,      /*yaw*/  93, /*pos*/ -1460,  -888, -3933),
@@ -20,7 +20,7 @@ const MacroObject ccm_seg7_area_1_macro_objs[] = {
     MACRO_OBJECT_WITH_BEH_PARAM(/*preset*/ macro_wooden_signpost,           /*yaw*/ 270, /*pos*/ -4350, -4864, -4813, /*behParam*/ DIALOG_094),
     //MACRO_OBJECT_WITH_BEH_PARAM(/*preset*/ macro_wooden_signpost,           /*yaw*/   0, /*pos*/ -1037, -3583,  5872, /*behParam*/ DIALOG_091),
     MACRO_OBJECT_WITH_BEH_PARAM(/*preset*/ macro_wooden_signpost,           /*yaw*/ 180, /*pos*/  -309, -4889, -3690, /*behParam*/ DIALOG_049),
-    MACRO_OBJECT_WITH_BEH_PARAM(/*preset*/ macro_wooden_signpost,           /*yaw*/   0, /*pos*/  1900, -1535,  3500, /*behParam*/ DIALOG_040),
+    //MACRO_OBJECT_WITH_BEH_PARAM(/*preset*/ macro_wooden_signpost,           /*yaw*/   0, /*pos*/  1900, -1535,  3500, /*behParam*/ DIALOG_040),
     MACRO_OBJECT(/*preset*/ macro_recovery_heart,            /*yaw*/   0, /*pos*/  -270, -4650, -3100),
     MACRO_OBJECT_END(),
 };

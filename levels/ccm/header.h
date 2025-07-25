@@ -17,11 +17,11 @@ extern const GeoLayout ccm_geo_00051C[];
 extern const GeoLayout ccm_geo_0005E8[];
 
 // leveldata
-extern const Gfx ccm_seg7_dl_0700B090[];
-extern const Gfx ccm_seg7_dl_0700B1D8[];
-extern const Gfx ccm_seg7_dl_0700C380[];
-extern const Gfx ccm_seg7_dl_0700D578[];
-extern const Gfx ccm_seg7_dl_0700DDF0[];
+extern const Gfx ccm_1_dl_mesh[];
+extern const Gfx ccm_2_dl_mesh[];
+extern const Gfx ccm_3_dl_mesh[];
+extern const Gfx ccm_4_dl_mesh[];
+extern const Gfx ccm_5_dl_mesh[];
 extern const Gfx ccm_seg7_dl_0700E708[];
 extern const Gfx ccm_seg7_dl_0700E970[];
 extern const Gfx ccm_seg7_dl_0700F440[];

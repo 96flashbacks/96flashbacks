@@ -10,8 +10,7 @@ static struct RacingPenguinData sRacingPenguinData[] = {
 };
 
 void bhv_racing_penguin_init(void) {
-    cur_obj_scale(5.0f);
-    o->header.gfx.scale[1] = 5.0f;
+    cur_obj_scale(6.0f);
 }
 
 static void racing_penguin_act_wait_for_mario(void) {
@@ -39,7 +38,6 @@ static void racing_penguin_act_show_init_text(void) {
 
         o->oAction = RACING_PENGUIN_ACT_PREPARE_FOR_RACE;
         o->oVelY = 60.0f;
-        ;
     } else if (response == 2) {
         o->oAction = RACING_PENGUIN_ACT_WAIT_FOR_MARIO;
         o->oRacingPenguinInitTextCooldown = 60;
@@ -150,7 +148,7 @@ static void racing_penguin_act_show_final_text(void) {
         }
     } else if (o->oRacingPenguinMarioWon) {
 #ifdef VERSION_JP
-        spawn_default_star(-7339.0f, -5700.0f, -6774.0f);
+        spawn_default_star(-7500, -5700, -6550);
 #else
         cur_obj_spawn_star_at_y_offset(-7339.0f, -5700.0f, -6774.0f, 200.0f);
 #endif

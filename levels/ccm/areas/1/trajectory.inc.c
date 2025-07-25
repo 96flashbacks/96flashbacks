@@ -29,7 +29,7 @@ const Trajectory ccm_seg7_trajectory_snowman[] = {
     TRAJECTORY_POS(26, /*pos*/ -4470, -1368, -2151),
     TRAJECTORY_POS(27, /*pos*/ -4679, -1358, -1321),
     TRAJECTORY_POS(28, /*pos*/ -4770, -1333,  -648),
-    TRAJECTORY_POS(29, /*pos*/ -4847, -1351,    40),
+    TRAJECTORY_POS(29, /*pos*/ -4747, -1351,    40),
     TRAJECTORY_END(),
 };
 

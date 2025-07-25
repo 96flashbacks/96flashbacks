@@ -84,9 +84,9 @@ void snowmans_bottom_act_2(void) {
         o->oForwardVel = 70.0f;
 
     o->oMoveAngleYaw = approach_s16_symmetric(o->oMoveAngleYaw, o->oSnowmansBottomUnkF8, 0x400);
-    if (is_point_close_to_object(o, -4230.0f, -1344.0f, 1813.0f, 300)) {
+    if (is_point_close_to_object(o, -3700.0f, -1344.0f, 1813.0f, 300)) {
         spawn_mist_particles_variable(0, 0, 70.0f);
-        o->oMoveAngleYaw = atan2s(1813.0f - o->oPosZ, -4230.0f - o->oPosX);
+        o->oMoveAngleYaw = atan2s(1813.0f - o->oPosZ, -3700.0f - o->oPosX);
         o->oVelY = 80.0f;
         o->oForwardVel = 15.0f;
         o->oAction = 3;
@@ -113,7 +113,7 @@ void snowmans_bottom_act_3(void) {
 
     if ((sp1E & 0x01) != 0) {
         spawn_mist_particles_variable(0, 0, 70.0f);
-        o->oPosX = -4230.0f;
+        o->oPosX = -3700.0f;
         o->oPosZ = 1813.0f;
         o->oForwardVel = 0.0f;
     }
@@ -176,9 +176,9 @@ void bhv_snowmans_head_init(void) {
     o->oBuoyancy = 2.0f;
 
     if ((sp37 & (1 << sp36)) && gCurrActNum != sp36 + 1) {
-        spawn_object_abs_with_rot(o, 0, MODEL_CCM_SNOWMAN_BASE, bhvBigSnowmanWhole, -4230, -1344, 1813,
+        spawn_object_abs_with_rot(o, 0, MODEL_CCM_SNOWMAN_BASE, bhvBigSnowmanWhole, -3700, -1344, 1813,
                                   0, 0, 0);
-        o->oPosX = -4230.0f;
+        o->oPosX = -3700.0f;
         o->oPosY = -994.0f;
         o->oPosZ = 1813.0f;
         o->oAction = 1;
@@ -217,7 +217,7 @@ void bhv_snowmans_head_loop(void) {
         case 4:
             if (trigger_obj_dialog_when_facing(&o->oSnowmansHeadUnkF4, DIALOG_111, 700.0f, 2)) {
                 spawn_mist_particles();
-                spawn_default_star(-4700.0f, -1024.0f, 1890.0f);
+                spawn_default_star(-4100.0f, -950.0f, 1850.0f);
                 o->oAction = 1;
             }
             break;
