@@ -3,7 +3,7 @@
 
 '96flashbacks' is an interpretation of the late beta (late February/early March) stages of Super Mario 64's development, made using the [SM64 Decomp](https://github.com/n64decomp/sm64) as a base.
 
-If there are any questions regarding this project, we invite you to join our [Discord Server.](https://discord.gg/rjWEDCqW4c)
+If there are any questions regarding this project, we invite you to join our [Discord Server.](https://discord.gg/FbMFSKVTv2)
 
 ## Credits
 
