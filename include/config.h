@@ -44,11 +44,12 @@
 //#define DECEMBER
 //#define RELCAN
 //#define NINTENDO_LOGO
-//#define INTRO
+#define INTRO
 #define DEBUG
 
 #if defined(FEBRUARY) || defined(DECEMBER)
 #define NINTENDO_LOGO
+#undef INTRO
 #endif
 
 #endif // CONFIG_H
