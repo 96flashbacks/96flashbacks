@@ -1,6 +1,8 @@
 # 96flashbacks
 ![new96fblogo](https://github.com/user-attachments/assets/0d342e2b-10c3-476a-b010-004b20afcb56)
 
+---
+
 '96flashbacks' is an interpretation of the late beta (late February/early March) stages of Super Mario 64's development, made using the [SM64 Decomp](https://github.com/n64decomp/sm64) as a base.
 
 If there are any questions regarding this project, we invite you to join our [Discord Server.](https://discord.gg/CpxaEqg6ww)
@@ -27,7 +29,7 @@ If there are any questions regarding this project, we invite you to join our [Di
 - SuperGarlic64
 - elinspectorardilla
 - TheRealDustinWijaya2006
-- brancolox
+- Neverax
 - ChaoticBuilder
 
 ### Special Thanks
