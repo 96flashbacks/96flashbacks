@@ -5,7 +5,7 @@ const MacroObject wf_seg7_macro_objs[] = {
     MACRO_OBJECT(/*preset*/ macro_coin_ring_horizontal,        /*yaw*/   0, /*pos*/ -2500,  1795,  -260),
     //MACRO_OBJECT(/*preset*/ macro_yellow_coin,                 /*yaw*/   0, /*pos*/  -500,  2650,  2900),
     //MACRO_OBJECT(/*preset*/ macro_yellow_coin,                 /*yaw*/   0, /*pos*/   250,  2650,  2800),
-    MACRO_OBJECT(/*preset*/ macro_yellow_coin,                 /*yaw*/   0, /*pos*/  -290,  2700,  2510),
+    MACRO_OBJECT(/*preset*/ macro_coin_ring_horizontal_flying,        /*yaw*/   0, /*pos*/ -150,  2650,  2350),
     //MACRO_OBJECT(/*preset*/ macro_yellow_coin,                 /*yaw*/   0, /*pos*/  -750,  2650,  2800),
     //MACRO_OBJECT(/*preset*/ macro_yellow_coin,                 /*yaw*/   0, /*pos*/     0,  2650,  2900),
     MACRO_OBJECT(/*preset*/ macro_yellow_coin,                 /*yaw*/   0, /*pos*/  3843,  1075, -1791),

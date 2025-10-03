@@ -1751,7 +1751,7 @@ static void intro_cutscene_raise_pipe(struct MarioState *m) {
     sIntroWarpPipeObj->oPosY = camera_approach_f32_symmetric(sIntroWarpPipeObj->oPosY, 260.0f, 10.0f);
 
     if (m->actionTimer == 0) {
-        play_sound(SOUND_MENU_EXIT_PIPE, sIntroWarpPipeObj->header.gfx.cameraToObject);
+        play_sound(SOUND_MENU_CAMERA_UNUSED1, sIntroWarpPipeObj->header.gfx.cameraToObject);
     }
 
     if (m->actionTimer++ == TIMER_RAISE_PIPE) {
@@ -1805,7 +1805,7 @@ static void intro_cutscene_land_outside_pipe(struct MarioState *m) {
 
 static void intro_cutscene_lower_pipe(struct MarioState *m) {
     if (m->actionTimer++ == 0) {
-        play_sound(SOUND_MENU_ENTER_PIPE, sIntroWarpPipeObj->header.gfx.cameraToObject);
+        play_sound(SOUND_MENU_CAMERA_UNUSED2, sIntroWarpPipeObj->header.gfx.cameraToObject);
         set_mario_animation(m, MARIO_ANIM_FIRST_PERSON);
     }
 
