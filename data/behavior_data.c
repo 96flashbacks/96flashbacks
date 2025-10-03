@@ -2439,7 +2439,7 @@ const BehaviorScript bhvPiranhaPlant[] = {
     SET_HURTBOX(/*Radius*/ 50, /*Height*/ 200),
     SET_INT(oIntangibleTimer, 0),
     SET_INT(oDamageOrCoinValue, 3),
-    SET_INT(oNumLootCoins, 5),
+    SET_INT(oNumLootCoins, 1),
     SPAWN_CHILD(/*Model*/ MODEL_BUBBLE, /*Behavior*/ bhvPiranhaPlantBubble),
     SET_FLOAT(oDrawingDistance, 2000),
     SET_HOME(),
