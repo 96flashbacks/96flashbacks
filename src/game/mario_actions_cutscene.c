@@ -1717,14 +1717,16 @@ static void advance_cutscene_step(struct MarioState *m) {
 }
 
 static void intro_cutscene_hide_hud_and_mario(struct MarioState *m) {
+    #ifndef INTRO_PIPEONLY
     gHudDisplay.flags = HUD_DISPLAY_NONE;
+    #endif
     m->statusForCamera->cameraEvent = CAM_EVENT_START_INTRO;
     m->marioObj->header.gfx.node.flags &= ~GRAPH_RENDER_ACTIVE;
     advance_cutscene_step(m);
 }
 
-#ifdef VERSION_EU
-#define TIMER_SPAWN_PIPE 47
+#ifdef INTRO_PIPEONLY
+#define TIMER_SPAWN_PIPE 0
 #else
 #define TIMER_SPAWN_PIPE 37
 #endif
@@ -1741,43 +1743,37 @@ static void intro_cutscene_peach_lakitu_scene(struct MarioState *m) {
 }
 #undef TIMER_SPAWN_PIPE
 
-#ifdef VERSION_EU
-#define TIMER_RAISE_PIPE 28
-#else
-#define TIMER_RAISE_PIPE 38
-#endif
 
 static void intro_cutscene_raise_pipe(struct MarioState *m) {
-    sIntroWarpPipeObj->oPosY = camera_approach_f32_symmetric(sIntroWarpPipeObj->oPosY, 260.0f, 10.0f);
+    sIntroWarpPipeObj->oPosY = camera_approach_f32_symmetric(sIntroWarpPipeObj->oPosY, 260.0f, 5.0f);
 
     if (m->actionTimer == 0) {
         play_sound(SOUND_MENU_CAMERA_UNUSED1, sIntroWarpPipeObj->header.gfx.cameraToObject);
     }
 
-    if (m->actionTimer++ == TIMER_RAISE_PIPE) {
+    if (m->actionTimer++ == 38) {
         m->vel[1] = 60.0f;
         advance_cutscene_step(m);
     }
 }
-#undef TIMER_RAISE_PIPE
+
+#ifdef INTRO_PIPEONLY
+#define TIMER_MARIO_JUMP 52
+#else
+#define TIMER_MARIO_JUMP 118
+#endif
 
 static void intro_cutscene_jump_out_of_pipe(struct MarioState *m) {
     if (m->actionTimer == 25) {
         gHudDisplay.flags = HUD_DISPLAY_DEFAULT;
     }
 
-    if (m->actionTimer++ >= 118) {
+    if (m->actionTimer++ >= TIMER_MARIO_JUMP) {
         m->marioObj->header.gfx.node.flags |= GRAPH_RENDER_ACTIVE;
 
-#ifdef VERSION_EU
-        // For some reason these calls were swapped.
-        play_sound_if_no_flag(m, SOUND_ACTION_HIT_3, MARIO_ACTION_SOUND_PLAYED);
-        play_sound_if_no_flag(m, SOUND_MARIO_YAHOO, MARIO_MARIO_SOUND_PLAYED);
-#else
         play_sound_if_no_flag(m, SOUND_MARIO_HOOHOO, MARIO_MARIO_SOUND_PLAYED);
 #ifndef VERSION_JP
         play_sound_if_no_flag(m, SOUND_ACTION_HIT_3, MARIO_ACTION_SOUND_PLAYED);
-#endif
 #endif
 
         set_mario_animation(m, MARIO_ANIM_SINGLE_JUMP);
@@ -1792,6 +1788,7 @@ static void intro_cutscene_jump_out_of_pipe(struct MarioState *m) {
         }
     }
 }
+#undef TIMER_MARIO_JUMP
 
 static void intro_cutscene_land_outside_pipe(struct MarioState *m) {
     set_mario_animation(m, MARIO_ANIM_LAND_FROM_SINGLE_JUMP);
